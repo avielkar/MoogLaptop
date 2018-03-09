@@ -1,0 +1,115 @@
+﻿Build started 05/03/2018 22:44:03.
+     1>Project "C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\LPTInterface\LPTInterface" /I..\..\..\..\MatlabRDX /I"..\..\..\..\libxl-3.6.5.0\include_cpp" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_res" /I..\..\..\..\OculusSDK\LibOVR\Include /I..\..\..\..\OculusSDK\LibOVRKernel\Src /I..\..\..\..\OculusSDK\LibOVR\Src /I..\..\..\..\OculusSDK\LibOVR\Include\Extras /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs\SDL\include" /I"C:\Program Files\Measurement Computing\DAQ\C" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\include" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\mswd" /I..\..\..\..\cbw /I..\..\NumericalMethods\NumericalMethods /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\Debug" /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\include" /I"..\..\..\..\glew-1.12.0-win32\glew-1.12.0\include\GL" /I..\..\..\..\ /I..\MoogCom\src /I"C:\Program Files (x86)\MATLAB\R2013a\extern\include" /I..\Dependencies /Zi /nologo /W3 /WX- /Od /Ob1 /Oy /D WIN32 /D NDEBUG /D _WINDOWS /D WINVER=0x0501 /D STRICT /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\release\\" /Fd"..\release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MainPanel.cpp MoogDots.cpp MoogDotsCom.cpp
+         MainPanel.cpp
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0/include/GL/glew.h(5439): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(8) : see previous definition of 'GL_OFFSET'
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         MoogDots.cpp
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0/include/GL/glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>MoogDots.cpp(37): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDots.cpp(337): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+         MoogDotsCom.cpp
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0/include/GL/glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\GlobalDefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\workingversion\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\OculusVR.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>MoogDotsCom.cpp(119): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(316): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(449): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(473): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(764): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(862): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1047): warning C4101: 'e' : unreferenced local variable
+     1>MoogDotsCom.cpp(1164): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1220): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1492): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1688): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1694): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1701): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1706): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1707): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1712): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1717): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1718): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1723): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1728): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1729): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1734): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1740): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1754): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1755): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1768): warning C4018: '<' : signed/unsigned mismatch
+     1>MoogDotsCom.cpp(1802): warning C4309: 'argument' : truncation of constant value
+     1>MoogDotsCom.cpp(1804): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1836): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1837): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1838): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1839): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1840): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1841): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1868): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1869): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1870): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1871): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1872): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1873): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1900): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1910): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1917): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1927): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(1956): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(2314): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(2415): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>MoogDotsCom.cpp(2423): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\release\MoogDots.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\LPTInterface\Release" /LIBPATH:..\..\NumericalMethods\NumericalMethods\Release /LIBPATH:..\MoogCom\release /LIBPATH:"..\..\..\..\libxl-3.6.5.0\lib" /LIBPATH:..\..\..\..\OculusSDK\LibOVRKernel\Lib\Windows\Win32\Debug\VS2013 /LIBPATH:..\..\..\..\OculusSDK\LibOVR\Lib\Windows\Win32\Release\VS2013 /LIBPATH:"..\..\..\..\oculusvr_samples-master\common_libs\SDL\lib\x86" /LIBPATH:"..\..\..\..\oculusvr_samples-master\common_libs\glew-1.11.0\lib\Release\Win32" /LIBPATH:..\..\..\..\MatlabRDX\Release /LIBPATH:..\..\..\..\cbw /LIBPATH:"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib" /LIBPATH:"C:\Program Files (x86)\MATLAB\R2013a\bin\win32" /LIBPATH:"C:\Program Files (x86)\MATLAB\R2013a\extern\lib\win32\microsoft" /LIBPATH:"C:\Program Files\MATLAB\R2013b\extern\lib\win64\microsoft" /LIBPATH:"..\..\..\..\glew-1.12.0-win32\glew-1.12.0\lib\Release\Win32" /LIBPATH:"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\Release" /LIBPATH:"C:\Program Files\MATLAB71\extern\lib\win32\microsoft\msvc70" /LIBPATH:C:\MATLAB701\extern\lib\win32\microsoft\msvc70 /LIBPATH:C:\MATLAB7\extern\lib\win32\microsoft\msvc70 /LIBPATH:C:\MATLAB6p5\extern\lib\win32\microsoft\msvc70 /LIBPATH:"C:\Program Files\Measurement Computing\DAQ\C" /LIBPATH:C:\Z\Lib /LIBPATH:..\..\..\..\lib LPTInterface.lib NumericalMethods.lib MoogCom.lib libxl.lib glew32.lib OpenGL32.lib libOVR.lib LibOVRKernel.lib SDL2.lib SDL2Main.lib wxmsw26_core.lib wxbase26.lib wxmsw26_gl.lib comctl32.lib Rpcrt4.lib libeng.lib libmex.lib libmx.lib libmat.lib cbw32.lib MatlabRDX.lib glut32.lib rpcrt4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\release\MoogDots.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\release\MoogDots.lib" /MACHINE:X86 /SAFESEH:NO ..\release\MoogDoots.res
+         ..\release\ScriptFile.obj
+         ..\release\Application.obj
+         ..\release\Camera.obj
+         ..\release\CameraDirector.obj
+         ..\release\CB_Tools.obj
+         ..\release\Font.obj
+         ..\release\GLWindow.obj
+         ..\release\Grid.obj
+         ..\release\InputHandlers.obj
+         ..\release\Logger.obj
+         ..\release\SDLOVRConfig.obj
+         ..\release\MainPanel.obj
+         ..\release\Math.obj
+         ..\release\MoogDots.obj
+         ..\release\MoogDotsCom.obj
+         ..\release\OculusVR.obj
+         ..\release\OculusVRDebug.obj
+         ..\release\OpenGL.obj
+         ..\release\OVRCameraFrustum.obj
+         ..\release\OVRTrackerChaperone.obj
+         ..\release\ParameterList.obj
+         ..\release\RenderContext.obj
+         ..\release\ShaderManager.obj
+         ..\release\stb_image.obj
+         ..\release\StdAfx.obj
+         ..\release\Texture.obj
+         ..\release\TextureManager.obj
+         ..\release\Utils.obj
+         MoogDots.vcxproj -> C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\..\release\MoogDots.exe
+     1>Done Building Project "C:\MoogDotsAllVersions\WorkingVersion\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.78

@@ -1,0 +1,18 @@
+﻿Build started 20/10/2016 20:51:39.
+     1>Project "C:\Users\user\Desktop\RelaeseMoogDots\MOOG_DOOTS_REALLOCATED_VER\MatlabRDX\MatlabRDX.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\..\cbw /I"C:\Users\Public\Documents\Measurement Computing\DAQ\CWin" /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy /D _CRT_SECURE_NO_DEPRECATE /D WIN32 /D NDEBUG /D _LIB /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\MatlabRDX.pch" /Fo"Release\\" /Fd"Release\MatlabRDX.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\..\cbw /I"C:\Users\Public\Documents\Measurement Computing\DAQ\CWin" /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy /D _CRT_SECURE_NO_DEPRECATE /D WIN32 /D NDEBUG /D _LIB /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\MatlabRDX.pch" /Fo"Release\\" /Fd"Release\MatlabRDX.pdb" /Gd /TP /analyze- /errorReport:prompt MatlabRDX.cpp
+         MatlabRDX.cpp
+     1>C:\Users\Public\Documents\Measurement Computing\DAQ\CWin\cbw.h(529): warning C4005: 'HIGH_LEVEL' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\kernelspecs.h(55) : see previous definition of 'HIGH_LEVEL'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Release\MatlabRDX.lib" /NOLOGO Release\MatlabRDX.obj
+         Release\stdafx.obj
+         MatlabRDX.vcxproj -> C:\Users\user\Desktop\RelaeseMoogDots\MOOG_DOOTS_REALLOCATED_VER\MatlabRDX\Release\MatlabRDX.lib
+     1>Done Building Project "C:\Users\user\Desktop\RelaeseMoogDots\MOOG_DOOTS_REALLOCATED_VER\MatlabRDX\MatlabRDX.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.55

@@ -1,0 +1,57 @@
+﻿Build started 25/05/2015 15:05:54.
+     1>Project "C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_adv.vcxproj" on node 3 (Rebuild target(s)).
+     1>CustomBuild:
+         Creating ..\..\lib\vc_lib\mswd\wx\msw\rcdefs.h
+         genrcdefs.h
+         Creating ..\..\lib\vc_lib\mswd\wx\setup.h
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswd /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D __WXMSW__ /D __WXDEBUG__ /D _VC80_UPGRADE=0x0600 /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_mswd\wxprec_advlib.pch" /Fo".\vc_mswd\adv\\" /Fd"..\..\lib\vc_lib\wxmsw26d_adv.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\msw\dummy.cpp
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\mswd /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D __WXMSW__ /D __WXDEBUG__ /D _VC80_UPGRADE=0x0600 /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_mswd\wxprec_advlib.pch" /Fo".\vc_mswd\adv\\" /Fd"..\..\lib\vc_lib\wxmsw26d_adv.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\common\taskbarcmn.cpp ..\..\src\generic\calctrl.cpp ..\..\src\generic\datectlg.cpp ..\..\src\generic\grid.cpp ..\..\src\generic\gridctrl.cpp ..\..\src\generic\gridsel.cpp ..\..\src\generic\helpext.cpp ..\..\src\generic\laywin.cpp ..\..\src\generic\propdlg.cpp ..\..\src\generic\sashwin.cpp ..\..\src\generic\splash.cpp ..\..\src\generic\tipdlg.cpp ..\..\src\generic\wizard.cpp ..\..\src\msw\datectrl.cpp ..\..\src\msw\joystick.cpp ..\..\src\msw\sound.cpp ..\..\src\msw\taskbar.cpp
+         taskbar.cpp
+         sound.cpp
+         joystick.cpp
+         datectrl.cpp
+         wizard.cpp
+         tipdlg.cpp
+         splash.cpp
+         sashwin.cpp
+         propdlg.cpp
+         laywin.cpp
+         helpext.cpp
+     1>C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\include\wx/generic/helpext.h : warning C4819: The file contains a character that cannot be represented in the current code page (1255). Save the file in Unicode format to prevent data loss
+         gridsel.cpp
+         gridctrl.cpp
+         grid.cpp
+         datectlg.cpp
+         calctrl.cpp
+         taskbarcmn.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\adv.lib) does not match the Library's OutputFile property value (C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\wxmsw26d_adv.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(adv) does not match the Library's OutputFile property value (wxmsw26d_adv). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxmsw26d_adv.lib" /NOLOGO .\vc_mswd\adv\taskbarcmn.obj
+         .\vc_mswd\adv\calctrl.obj
+         .\vc_mswd\adv\datectlg.obj
+         .\vc_mswd\adv\grid.obj
+         .\vc_mswd\adv\gridctrl.obj
+         .\vc_mswd\adv\gridsel.obj
+         .\vc_mswd\adv\helpext.obj
+         .\vc_mswd\adv\laywin.obj
+         .\vc_mswd\adv\propdlg.obj
+         .\vc_mswd\adv\sashwin.obj
+         .\vc_mswd\adv\splash.obj
+         .\vc_mswd\adv\tipdlg.obj
+         .\vc_mswd\adv\wizard.obj
+         .\vc_mswd\adv\datectrl.obj
+         .\vc_mswd\adv\dummy.obj
+         .\vc_mswd\adv\joystick.obj
+         .\vc_mswd\adv\sound.obj
+         .\vc_mswd\adv\taskbar.obj
+         wx_adv.vcxproj -> C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\adv.lib
+     1>Done Building Project "C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_adv.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:16.72

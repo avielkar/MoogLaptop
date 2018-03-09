@@ -1,0 +1,46 @@
+﻿Build started 22/09/2016 21:33:41.
+     1>Project "C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_net.vcxproj" on node 5 (Build target(s)).
+     1>CustomBuild:
+         Creating ..\..\lib\vc_lib\msw\wx\msw\rcdefs.h
+         genrcdefs.h
+         Creating ..\..\lib\vc_lib\msw\wx\setup.h
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\msw /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /O2 /Oy- /D WIN32 /D _LIB /D __WXMSW__ /D wxUSE_GUI=0 /D _VC80_UPGRADE=0x0600 /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_msw\wxprec_netlib.pch" /Fo".\vc_msw\net\\" /Fd"..\..\lib\vc_lib\wxbase26_net.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\msw\dummy.cpp
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\msw /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /O2 /Oy- /D WIN32 /D _LIB /D __WXMSW__ /D wxUSE_GUI=0 /D _VC80_UPGRADE=0x0600 /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_msw\wxprec_netlib.pch" /Fo".\vc_msw\net\\" /Fd"..\..\lib\vc_lib\wxbase26_net.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\common\fs_inet.cpp ..\..\src\common\ftp.cpp ..\..\src\common\http.cpp ..\..\src\common\protocol.cpp ..\..\src\common\sckaddr.cpp ..\..\src\common\sckfile.cpp ..\..\src\common\sckipc.cpp ..\..\src\common\sckstrm.cpp ..\..\src\common\socket.cpp ..\..\src\common\url.cpp ..\..\src\msw\gsocket.cpp ..\..\src\msw\urlmsw.cpp
+         fs_inet.cpp
+         ftp.cpp
+         http.cpp
+         protocol.cpp
+         sckaddr.cpp
+         sckfile.cpp
+         sckipc.cpp
+         sckstrm.cpp
+         socket.cpp
+         url.cpp
+         gsocket.cpp
+         urlmsw.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\net.lib) does not match the Library's OutputFile property value (C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\wxbase26_net.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(net) does not match the Library's OutputFile property value (wxbase26_net). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxbase26_net.lib" /NOLOGO .\vc_msw\net\fs_inet.obj
+         .\vc_msw\net\ftp.obj
+         .\vc_msw\net\http.obj
+         .\vc_msw\net\protocol.obj
+         .\vc_msw\net\sckaddr.obj
+         .\vc_msw\net\sckfile.obj
+         .\vc_msw\net\sckipc.obj
+         .\vc_msw\net\sckstrm.obj
+         .\vc_msw\net\socket.obj
+         .\vc_msw\net\url.obj
+         .\vc_msw\net\dummy.obj
+         .\vc_msw\net\gsocket.obj
+         .\vc_msw\net\urlmsw.obj
+         wx_net.vcxproj -> C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\net.lib
+     1>Done Building Project "C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_net.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.52

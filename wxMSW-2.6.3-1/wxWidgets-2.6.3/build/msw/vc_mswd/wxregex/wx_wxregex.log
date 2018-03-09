@@ -1,0 +1,27 @@
+﻿Build started 25/05/2015 15:04:53.
+     1>Project "C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_wxregex.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Creating ..\..\lib\vc_lib\mswd\wx\msw\rcdefs.h
+         genrcdefs.h
+         Creating ..\..\lib\vc_lib\mswd\wx\setup.h
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\include /I..\..\lib\vc_lib\mswd /Zi /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _LIB /D _DEBUG /D __WXMSW__ /D _VC80_UPGRADE=0x0600 /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\vc_mswd\wxregex\\" /Fd"..\..\lib\vc_lib\wxregexd.pdb" /Gd /TC /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\regex\regcomp.c ..\..\src\regex\regerror.c ..\..\src\regex\regexec.c ..\..\src\regex\regfree.c
+         regfree.c
+         regexec.c
+         regerror.c
+         regcomp.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\wxregex.lib) does not match the Library's OutputFile property value (C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\wxregexd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(wxregex) does not match the Library's OutputFile property value (wxregexd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxregexd.lib" /NOLOGO .\vc_mswd\wxregex\regcomp.obj
+         .\vc_mswd\wxregex\regerror.obj
+         .\vc_mswd\wxregex\regexec.obj
+         .\vc_mswd\wxregex\regfree.obj
+         wx_wxregex.vcxproj -> C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\wxregex.lib
+     1>Done Building Project "C:\Users\robocup\Desktop\290425015\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_wxregex.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.59

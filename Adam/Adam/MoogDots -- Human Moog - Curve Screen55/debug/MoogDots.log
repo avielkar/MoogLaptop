@@ -1,0 +1,139 @@
+﻿Build started 30/03/2017 18:34:14.
+     1>Project "C:\MoogDotsAllVersions\version2.4.0.0.0\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\..\..\..\libxl-3.6.5.0\include_cpp" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_res" /I..\..\..\..\OculusSDK\LibOVRKernel\Src /I..\..\..\..\OculusSDK\LibOVR\Src /I..\..\..\..\OculusSDK\LibOVR\Include /I..\..\..\..\OculusSDK\LibOVR\Include\Extras /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs\SDL\include" /I"C:\Program Files\Measurement Computing\DAQ\C" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\include" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\mswd" /I..\..\..\..\cbw /I..\..\NumericalMethods\NumericalMethods /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\Debug" /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\include" /I"..\..\..\..\glew-1.12.0-win32\glew-1.12.0\include\GL" /I..\MoogCom\src /I..\..\..\..\ /I"C:\Program Files (x86)\MATLAB32bit\R2013b\extern\include" /I"C:\Program Files\MATLAB\R2013b\extern\include" /IC:\Z\Include\Experimental /IC:\Z\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\debug\\" /Fd"..\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MainPanel.cpp MoogDots.cpp MoogDotsCom.cpp
+         MoogDotsCom.cpp
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(84): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(5): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(745): error C2660: 'CMatlabRDX::InitClient' : function does not take 3 arguments
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(933): error C2660: 'CMatlabRDX::ReadString' : function does not take 6 arguments
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2146: syntax error : missing ';' before identifier 'sX'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2065: 'sX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2146: syntax error : missing ';' before identifier 'sY'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2065: 'sY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2146: syntax error : missing ';' before identifier 'sZ'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2065: 'sZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1352): error C2065: 'sX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1352): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1353): error C2065: 'sY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1353): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1354): error C2065: 'sZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1354): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1358): error C3861: 'sX': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1359): error C3861: 'sY': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1360): error C3861: 'sZ': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2146: syntax error : missing ';' before identifier 'sRotX'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2065: 'sRotX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2146: syntax error : missing ';' before identifier 'sRotY'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2065: 'sRotY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2146: syntax error : missing ';' before identifier 'sRotZ'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2065: 'sRotZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1367): error C2065: 'sRotX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1367): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1368): error C2065: 'sRotY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1368): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1369): error C2065: 'sRotZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1369): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1373): error C3861: 'sRotX': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1374): error C3861: 'sRotY': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1375): error C3861: 'sRotZ': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1681): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2146: syntax error : missing ';' before identifier 'sX'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2065: 'sX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2146: syntax error : missing ';' before identifier 'sY'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2065: 'sY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2146: syntax error : missing ';' before identifier 'sZ'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2065: 'sZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2146: syntax error : missing ';' before identifier 'sX'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2065: 'sX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2146: syntax error : missing ';' before identifier 'sY'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2065: 'sY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2146: syntax error : missing ';' before identifier 'sZ'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2065: 'sZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2226): error C2065: 'sX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2226): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2227): error C2065: 'sY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2227): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2228): error C2065: 'sZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2228): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2232): error C3861: 'sX': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2233): error C3861: 'sY': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2234): error C3861: 'sZ': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2146: syntax error : missing ';' before identifier 'sRotX'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2065: 'sRotX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2146: syntax error : missing ';' before identifier 'sRotY'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2065: 'sRotY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2653: 'tk' : is not a class or namespace name
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2065: 'spline' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2146: syntax error : missing ';' before identifier 'sRotZ'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2065: 'sRotZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2241): error C2065: 'sRotX' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2241): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2242): error C2065: 'sRotY' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2242): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2243): error C2065: 'sRotZ' : undeclared identifier
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2243): error C2228: left of '.set_points' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2247): error C3861: 'sRotX': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2248): error C3861: 'sRotY': identifier not found
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2249): error C3861: 'sRotZ': identifier not found
+         MoogDots.cpp
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(84): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(5): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+         MainPanel.cpp
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(84): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(5): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+         Generating Code...
+     1>Done Building Project "C:\MoogDotsAllVersions\version2.4.0.0.0\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.39

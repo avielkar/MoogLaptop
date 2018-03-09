@@ -1,0 +1,28 @@
+﻿Build started 22/09/2016 21:33:43.
+     1>Project "C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_media.vcxproj" on node 4 (Build target(s)).
+     1>CustomBuild:
+         Creating ..\..\lib\vc_lib\msw\wx\msw\rcdefs.h
+         The process cannot access the file because it is being used by another process.
+         Creating ..\..\lib\vc_lib\msw\wx\setup.h
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\msw /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /O2 /Oy- /D WIN32 /D _LIB /D __WXMSW__ /D _VC80_UPGRADE=0x0600 /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_msw\wxprec_medialib.pch" /Fo".\vc_msw\media\\" /Fd"..\..\lib\vc_lib\wxmsw26_media.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\msw\dummy.cpp
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\msw /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /O2 /Oy- /D WIN32 /D _LIB /D __WXMSW__ /D _VC80_UPGRADE=0x0600 /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_msw\wxprec_medialib.pch" /Fo".\vc_msw\media\\" /Fd"..\..\lib\vc_lib\wxmsw26_media.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\common\mediactrlcmn.cpp ..\..\src\msw\mediactrl.cpp ..\..\src\msw\ole\activex.cpp
+         mediactrlcmn.cpp
+         mediactrl.cpp
+         activex.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\media.lib) does not match the Library's OutputFile property value (C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\wxmsw26_media.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(media) does not match the Library's OutputFile property value (wxmsw26_media). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxmsw26_media.lib" /NOLOGO .\vc_msw\media\mediactrlcmn.obj
+         .\vc_msw\media\dummy.obj
+         .\vc_msw\media\mediactrl.obj
+         .\vc_msw\media\activex.obj
+         wx_media.vcxproj -> C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\media.lib
+     1>Done Building Project "C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_media.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.35

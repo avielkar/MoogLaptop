@@ -1,0 +1,57 @@
+﻿Build started 22/09/2016 21:33:43.
+     1>Project "C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_adv.vcxproj" on node 3 (Build target(s)).
+     1>CustomBuild:
+         Creating ..\..\lib\vc_lib\msw\wx\msw\rcdefs.h
+         genrcdefs.h
+         Creating ..\..\lib\vc_lib\msw\wx\setup.h
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\msw /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /O2 /Oy- /D WIN32 /D _LIB /D __WXMSW__ /D _VC80_UPGRADE=0x0600 /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"wx/wxprec.h" /Fp"vc_msw\wxprec_advlib.pch" /Fo".\vc_msw\adv\\" /Fd"..\..\lib\vc_lib\wxmsw26_adv.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\msw\dummy.cpp
+         dummy.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\vc_lib\msw /I..\..\include /I..\..\src\tiff /I..\..\src\jpeg /I..\..\src\png /I..\..\src\zlib /I..\..\src\regex /I..\..\src\expat\lib /Zi /nologo /W4 /WX- /O2 /Oy- /D WIN32 /D _LIB /D __WXMSW__ /D _VC80_UPGRADE=0x0600 /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"wx/wxprec.h" /Fp"vc_msw\wxprec_advlib.pch" /Fo".\vc_msw\adv\\" /Fd"..\..\lib\vc_lib\wxmsw26_adv.pdb" /Gd /TP /analyze- /errorReport:prompt  /EHsc   /EHsc ..\..\src\common\taskbarcmn.cpp ..\..\src\generic\calctrl.cpp ..\..\src\generic\datectlg.cpp ..\..\src\generic\grid.cpp ..\..\src\generic\gridctrl.cpp ..\..\src\generic\gridsel.cpp ..\..\src\generic\helpext.cpp ..\..\src\generic\laywin.cpp ..\..\src\generic\propdlg.cpp ..\..\src\generic\sashwin.cpp ..\..\src\generic\splash.cpp ..\..\src\generic\tipdlg.cpp ..\..\src\generic\wizard.cpp ..\..\src\msw\datectrl.cpp ..\..\src\msw\joystick.cpp ..\..\src\msw\sound.cpp ..\..\src\msw\taskbar.cpp
+         taskbarcmn.cpp
+         calctrl.cpp
+         datectlg.cpp
+         grid.cpp
+         gridctrl.cpp
+         gridsel.cpp
+         helpext.cpp
+     1>C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\include\wx/generic/helpext.h : warning C4819: The file contains a character that cannot be represented in the current code page (1255). Save the file in Unicode format to prevent data loss
+         laywin.cpp
+         propdlg.cpp
+         sashwin.cpp
+         splash.cpp
+         tipdlg.cpp
+         wizard.cpp
+         datectrl.cpp
+         joystick.cpp
+         sound.cpp
+         taskbar.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\adv.lib) does not match the Library's OutputFile property value (C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\wxmsw26_adv.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(adv) does not match the Library's OutputFile property value (wxmsw26_adv). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\..\lib\vc_lib\wxmsw26_adv.lib" /NOLOGO .\vc_msw\adv\taskbarcmn.obj
+         .\vc_msw\adv\calctrl.obj
+         .\vc_msw\adv\datectlg.obj
+         .\vc_msw\adv\grid.obj
+         .\vc_msw\adv\gridctrl.obj
+         .\vc_msw\adv\gridsel.obj
+         .\vc_msw\adv\helpext.obj
+         .\vc_msw\adv\laywin.obj
+         .\vc_msw\adv\propdlg.obj
+         .\vc_msw\adv\sashwin.obj
+         .\vc_msw\adv\splash.obj
+         .\vc_msw\adv\tipdlg.obj
+         .\vc_msw\adv\wizard.obj
+         .\vc_msw\adv\datectrl.obj
+         .\vc_msw\adv\dummy.obj
+         .\vc_msw\adv\joystick.obj
+         .\vc_msw\adv\sound.obj
+         .\vc_msw\adv\taskbar.obj
+         wx_adv.vcxproj -> C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\.\..\..\lib\vc_lib\adv.lib
+     1>Done Building Project "C:\Users\user\Desktop\RelaeseMoogDots\version2.0.0.4.3\MOOG_DOOTS_REALLOCATED_VER\wxMSW-2.6.3-1\wxWidgets-2.6.3\build\msw\wx_adv.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.27
