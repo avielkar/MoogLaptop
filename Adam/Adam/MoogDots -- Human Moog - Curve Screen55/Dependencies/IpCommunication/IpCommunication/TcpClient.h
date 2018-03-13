@@ -12,6 +12,8 @@
 
 
 
+#ifndef TCP_CLIENT
+#define TCP_CLIENT
 
 using namespace std;
 
@@ -42,4 +44,6 @@ public:
 	//
 	void CloseConnection();
 };
+
+#endif
 

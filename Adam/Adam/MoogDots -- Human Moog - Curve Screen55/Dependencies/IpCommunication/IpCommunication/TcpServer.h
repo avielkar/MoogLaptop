@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef TCP_SERVER
+#define TCP_SERVER
+
 class TcpServer
 {
 private:
@@ -20,3 +23,5 @@ public:
 	//
 	void CloseConnection();
 };
+
+#endif
