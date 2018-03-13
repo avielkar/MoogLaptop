@@ -1,1 +1,6 @@
-/build
+*.tlog
+*.obj
+*.pdb
+*.idb
+*.log
+*.lib
