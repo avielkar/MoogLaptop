@@ -26,11 +26,9 @@ class TcpClient
 {
 
 private:
-
 	SOCKET m_s;
 
 public:
-
 	//Default constructor.
 	//
 	TcpClient();
@@ -43,6 +41,10 @@ public:
 	//Shuts down the socket and closes any connections on it.
 	//
 	void CloseConnection();
+
+	//Send data to the server.
+	//
+	int Write(const char* data);
 };
 
 #endif

@@ -7,11 +7,20 @@
 #ifndef TCP_SERVER
 #define TCP_SERVER
 
+using namespace std;
+
+//A full tcp server for sendinf and receivinf data.
 class TcpServer
 {
 private:
+	//The socket for listening to connection requests.
 	SOCKET m_s;
-	WSADATA m_w;
+
+	//The socket for listening to a specific user and to read and write data.
+	SOCKET m_dataSocket;
+
+	//The buffer to read and write data to.
+	char m_buffer[1024];
 
 public:
 
@@ -22,6 +31,10 @@ public:
 	//Shuts down the socket and closes any connections on it.
 	//
 	void CloseConnection();
+
+	//Read bytes from buffer.
+	//
+	int Read(char* buffer);
 };
 
 #endif

@@ -5,8 +5,15 @@
 int main()
 {
 	TcpServer* tcpServer = new TcpServer();
-	tcpServer->ListenOnPort(6659);
-	
-	TcpClient* tcpClient = new TcpClient();
-	tcpClient->ConnectToHost(6659, "127.0.0.1");
+	tcpServer->ListenOnPort(8888);
+
+	char buffer[1024];
+
+	while (true)
+	{
+		Sleep(100);
+		cout << tcpServer->Read(buffer);
+	}
+
+	tcpServer->CloseConnection();
 }

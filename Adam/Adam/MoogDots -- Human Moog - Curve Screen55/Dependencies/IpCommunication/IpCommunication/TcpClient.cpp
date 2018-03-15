@@ -42,6 +42,7 @@ bool TcpClient::ConnectToHost(u_short port, const char * ip)
 	//try connecting......
 	if (connect(m_s, (SOCKADDR*)(&target), sizeof(target)) == SOCKET_ERROR)
 	{
+
 		return false;
 	}
 
@@ -56,4 +57,9 @@ void TcpClient::CloseConnection()
 
 	//clean up winsock.
 	WSACleanup();
+}
+
+int TcpClient::Write(const char* data)
+{
+	return send(m_s, data, sizeof(data), 0);
 }
