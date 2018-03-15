@@ -9,25 +9,21 @@
 
 #include "TcpServer.h"
 
+TcpServer::TcpServer()
+{
+	//Fill in WSA info.
+	WSADATA w;
+	int error = WSAStartup(0x202, &w);
+
+	//If the version of the socket is not what we asked for.
+	if (w.wVersion != 0x202)
+	{
+		WSACleanup();
+	}
+}
 
 int TcpServer::ListenOnPort(int portNum)
 {
-	//Fill in WSA info.
-	WSADATA m_w;
-	int error = WSAStartup(0x202, &m_w);
-
-	//If winsock could not be started.
-	if (error)
-		return -1;
-
-	//If the version of the socket is not what we asked for.
-	if (m_w.wVersion != 0x202)
-	{
-		WSACleanup();
-
-		return -2;
-	}
-
 	//The adress structure for a tco socket.
 	sockaddr_in serverAdress;
 
@@ -75,7 +71,7 @@ void  TcpServer::CloseConnection()
 	WSACleanup();
 }
 
-int TcpServer::Read(char* buffer)
+int TcpServer::Read(char* buffer , int port)
 {
 	return recv(m_dataSocket, buffer, 1024, 0);
 }

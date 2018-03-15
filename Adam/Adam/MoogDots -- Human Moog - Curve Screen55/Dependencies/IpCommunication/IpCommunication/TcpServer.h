@@ -13,16 +13,16 @@ using namespace std;
 class TcpServer
 {
 private:
-	//The socket for listening to connection requests.
+	//The socket fomr listening to connection requests.
 	SOCKET m_s;
 
 	//The socket for listening to a specific user and to read and write data.
 	SOCKET m_dataSocket;
 
-	//The buffer to read and write data to.
-	char m_buffer[1024];
-
 public:
+	//Default constructor.
+	//
+	TcpServer();
 
 	//Listens to a specific port from any client.
 	//
