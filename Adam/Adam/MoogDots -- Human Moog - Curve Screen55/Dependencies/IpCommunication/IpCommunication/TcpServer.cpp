@@ -1,9 +1,5 @@
-#include <iostream>
+#include "TcpServer.h"
 
-#include <WinSock2.h>
-#include <ws2tcpip.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 //http://www.bogotobogo.com/cplusplus/sockets_server_client.php
 

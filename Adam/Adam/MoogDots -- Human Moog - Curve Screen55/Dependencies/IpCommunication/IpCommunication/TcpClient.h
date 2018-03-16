@@ -10,6 +10,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <thread>
+
+#include <map>
 
 
 #ifndef TCP_CLIENT
@@ -18,7 +21,6 @@
 using namespace std;
 
 //Target host details:
-#define PORT 1234
 #define HOST "127.0.0.1"
 
 
@@ -26,7 +28,10 @@ class TcpClient
 {
 
 private:
-	SOCKET m_s;
+	//The ports map to their data socket.
+	std::map<int, SOCKET> m_portsDataSocketMap;
+
+	bool ConnectToHostThread(u_short port, const char * ip);
 
 public:
 	//Default constructor.
@@ -40,11 +45,11 @@ public:
 
 	//Shuts down the socket and closes any connections on it.
 	//
-	void CloseConnection();
+	void CloseConnection(u_short port);
 
 	//Send data to the server.
 	//
-	int Write(const char* data);
+	int Write(int port, const char* data);
 };
 
 #endif
