@@ -15,4 +15,6 @@
 
 #define TIMEOUT  9000
 
+#define MAXLINEBUFFER 64
+
 #endif

@@ -58,6 +58,12 @@ public:
 	//Send data to the server.
 	//
 	int Write(int port, const char* data);
+
+	//Read a single char from the buffer communication in the given port.
+	//port - The server port to read the data from.
+	//data - The read char in the buffer.
+	//Returns the numbers of read chars.
+	int ReadByte(int port, char& data);
 };
 
 #endif

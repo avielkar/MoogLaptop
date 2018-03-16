@@ -75,3 +75,8 @@ int TcpClient::Write(int port , const char* data)
 
 	return send(m_portsDataSocketMap[port], data, strlen(data), 0);
 }
+
+int TcpClient::ReadByte(int port, char& data)
+{
+	return recv(m_portsDataSocketMap[port], &data, 1, 0);
+}
