@@ -16,9 +16,17 @@ private:
 	bool ReadByte(double timeOut, char& data, u_short port);
 
 public:
+	//Default constructor.
+	//
+	MatlabTcpCommunicator();
+
 	//Connects all the communication ports between the client and the server.
 	//
 	void ConnectClientPortsToServer();
+
+	//Closes the clients port that communcate with the Matlab server.
+	//
+	void CloseClientPortsToServer();
 
 	//This function read a string command from the given port (string command is data untill first '/n' in the buffer).
 	//timeOut - The max time to try reading the line wothout connection.

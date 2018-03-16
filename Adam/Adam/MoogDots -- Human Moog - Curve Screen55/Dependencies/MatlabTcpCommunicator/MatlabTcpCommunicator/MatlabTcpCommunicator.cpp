@@ -1,5 +1,10 @@
 #include "MatlabTcpcommunicator.h"
 
+MatlabTcpCommunicator::MatlabTcpCommunicator()
+{
+
+}
+
 void MatlabTcpCommunicator::ConnectClientPortsToServer()
 {
 	m_client = new TcpClient();
@@ -18,6 +23,21 @@ void MatlabTcpCommunicator::ConnectClientPortsToServer()
 
 	//wait all connections to be made.
 	Sleep(TIMEOUT);
+}
+
+void MatlabTcpCommunicator::CloseClientPortsToServer()
+{
+	m_client->CloseConnection(FIRSTPORTA);
+	m_client->CloseConnection(SECONDPORTA);
+
+	m_client->CloseConnection(FIRSTPORTB);
+	m_client->CloseConnection(SECONDORTB);
+
+	m_client->CloseConnection(FIRSTPORTCH);
+	m_client->CloseConnection(SECONDPORTCH);
+
+	m_client->CloseConnection(FIRSTPORTCL);
+	m_client->CloseConnection(SECONDPORTCL);
 }
 
 int MatlabTcpCommunicator::ReadString(double timeOut, string& data, u_short port)
