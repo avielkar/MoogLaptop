@@ -19,10 +19,9 @@ int main()
 	client->ConnectToHost(FIRSTPORTCL, HOST, TIMEOUT);
 	client->ConnectToHost(SECONDPORTCL, HOST, TIMEOUT);
 
-	client->Write(FIRSTPORTA, "dfdfdf");
-	//client->Write("df");
-	//client->Write("df");
-	Sleep(10000);
+	//wait all connections to be made.
+	Sleep(TIMEOUT);
+
 	client->CloseConnection(FIRSTPORTA);
 	client->CloseConnection(SECONDPORTA);
 
