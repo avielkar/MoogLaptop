@@ -5,28 +5,33 @@
 
 int main()
 {
-	/*TcpServer* tcpServer = new TcpServer();
-	tcpServer->ListenOnPort(8888);
-
-	tcpServer->ListenOnPort(8889);
-	char buffer[1024];
-
-	while (true)
-	{
-	Sleep(100);
-	cout << tcpServer->Read(buffer, 8888);
-	cout << tcpServer->Read(buffer, 8889);
-	}
-
-	tcpServer->CloseConnection(8888);*/
-
 	TcpClient* client = new TcpClient();
 
-	client->ConnectToHost(FIRSTPORTA, HOST);
-	client->ConnectToHost(FIRSTPORTB, HOST);
+	client->ConnectToHost(FIRSTPORTA, HOST, TIMEOUT);
+	client->ConnectToHost(SECONDPORTA, HOST, TIMEOUT);
+
+	client->ConnectToHost(FIRSTPORTB, HOST, TIMEOUT);
+	client->ConnectToHost(SECONDORTB, HOST, TIMEOUT);
+
+	client->ConnectToHost(FIRSTPORTCH, HOST, TIMEOUT);
+	client->ConnectToHost(SECONDPORTCH, HOST, TIMEOUT);
+
+	client->ConnectToHost(FIRSTPORTCL, HOST, TIMEOUT);
+	client->ConnectToHost(SECONDPORTCL, HOST, TIMEOUT);
+
 	client->Write(FIRSTPORTA, "dfdfdf");
 	//client->Write("df");
 	//client->Write("df");
+	Sleep(10000);
 	client->CloseConnection(FIRSTPORTA);
+	client->CloseConnection(SECONDPORTA);
+
 	client->CloseConnection(FIRSTPORTB);
+	client->CloseConnection(SECONDORTB);
+
+	client->CloseConnection(FIRSTPORTCH);
+	client->CloseConnection(SECONDPORTCH);
+
+	client->CloseConnection(FIRSTPORTCL);
+	client->CloseConnection(SECONDPORTCL);
 }

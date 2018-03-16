@@ -16,12 +16,10 @@ TcpClient::TcpClient()
 	}
 }
 
-bool::TcpClient::ConnectToHostThread(u_short port, const char * ip)
+bool::TcpClient::ConnectToHostThread(u_short port, const char * ip , double timeOut)
 {
 	//socket adress information
 	sockaddr_in target;
-
-
 	target.sin_family = AF_INET;
 	target.sin_port = htons(port);
 	target.sin_addr.S_un.S_addr = inet_addr(ip);
@@ -35,22 +33,29 @@ bool::TcpClient::ConnectToHostThread(u_short port, const char * ip)
 		return false;
 	}
 
-
-	//try connecting......
-	if (connect(s, (SOCKADDR*)(&target), sizeof(target)) == SOCKET_ERROR)
+	Timer timer;
+	timer.start();
+	while (timer.isTimeout(timeOut))
 	{
-		return false;
+		//try connecting......
+		if (connect(s, (SOCKADDR*)(&target), sizeof(target)) != SOCKET_ERROR)
+		{
+			cout << "connected to " << port << "\n";
+			m_portsDataSocketMap[port] = s;
+			return true;
+		}
+
+		Sleep(200);
 	}
 
-	m_portsDataSocketMap[port] = s;
-
-	return true;
+	return false;
 }
 
-bool TcpClient::ConnectToHost(u_short port, const char * ip)
+bool TcpClient::ConnectToHost(u_short port, const char * ip , double timeOut)
 {
-	std::thread t = thread(&TcpClient::ConnectToHostThread, this, port, ip);
+	std::thread t = thread(&TcpClient::ConnectToHostThread, this, port, ip , timeOut);
 	t.detach();
+
 	return true;
 }
 

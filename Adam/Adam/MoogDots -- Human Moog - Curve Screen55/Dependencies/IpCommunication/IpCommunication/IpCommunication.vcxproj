@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="TcpClient.h" />
     <ClInclude Include="TcpServer.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TcpClient.cpp" />

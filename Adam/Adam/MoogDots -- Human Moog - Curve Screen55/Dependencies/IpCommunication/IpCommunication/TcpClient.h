@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "Timer.h"
+
 #include <thread>
 
 #include <map>
@@ -29,9 +31,14 @@ class TcpClient
 
 private:
 	//The ports map to their data socket.
+	//
 	std::map<int, SOCKET> m_portsDataSocketMap;
 
-	bool ConnectToHostThread(u_short port, const char * ip);
+	//Connectin to a given host threded function.
+	//port - the port num to connect to.
+	//ip - the ip string to connect to with the given port.
+	//timeOut - timeOut time for retreiving connection in ms.
+	bool ConnectToHostThread(u_short port, const char * ip , double timeOut);
 
 public:
 	//Default constructor.
@@ -41,7 +48,8 @@ public:
 	//Connectin to a given host.
 	//port - the port num to connect to.
 	//ip - the ip string to connect to with the given port.
-	bool ConnectToHost(u_short port, const char * ip);
+	//timeOut - timeOut time for retreiving connection in ms.
+	bool ConnectToHost(u_short port, const char * ip , double timeOut);
 
 	//Shuts down the socket and closes any connections on it.
 	//

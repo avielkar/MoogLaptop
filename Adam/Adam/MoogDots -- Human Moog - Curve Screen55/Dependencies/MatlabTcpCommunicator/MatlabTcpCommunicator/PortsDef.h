@@ -13,4 +13,6 @@
 #define FIRSTPORTCH 9190
 #define SECONDPORTCH 9191
 
+#define TIMEOUT  9000
+
 #endif
