@@ -47,6 +47,7 @@ int TcpServer::ListenOnPortThread(int port)
 
 	listen(s, SOMAXCONN);
 
+	//create the socket for the client transfer and receive data from the client.
 	sockaddr_in client;
 	int clientSize = sizeof(client);
 	SOCKET dataSocket = accept(s, (sockaddr*)(&client), &clientSize);

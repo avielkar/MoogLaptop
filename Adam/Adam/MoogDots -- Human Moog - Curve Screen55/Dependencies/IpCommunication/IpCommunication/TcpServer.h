@@ -16,12 +16,6 @@
 class TcpServer
 {
 private:
-	//The socket fomr listening to connection requests.
-	//SOCKET m_s;
-
-	//The socket for listening to a specific user and to read and write data.
-	//SOCKET m_dataSocket;
-
 	//The ports map to their listening socket.
 	std::map<int, SOCKET> m_portsListeningSocketMap;
 
@@ -29,6 +23,8 @@ private:
 	std::map<int, SOCKET> m_portsDataSocketMap;
 
 protected:
+	//Listens to a specific port from any client thread function.
+	//
 	int ListenOnPortThread(int port);
 
 public:
