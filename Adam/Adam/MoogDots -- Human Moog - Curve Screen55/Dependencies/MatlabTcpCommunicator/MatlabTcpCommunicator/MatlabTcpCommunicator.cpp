@@ -52,6 +52,7 @@ int MatlabTcpCommunicator::ReadString(double timeOut, string& data, u_short port
 			return -1;
 		buffer[index] = currentReadChar;
 		index++;
+		cout << currentReadChar;
 	} while (currentReadChar != '/n');
 
 	//append the data to the output data.
