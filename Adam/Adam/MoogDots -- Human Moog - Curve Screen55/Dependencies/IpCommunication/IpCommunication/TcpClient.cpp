@@ -44,11 +44,8 @@ bool::TcpClient::ConnectToHostThread(u_short port, const char * ip , double time
 			m_portsDataSocketMap[port] = s;
 
 			//set a timeout for reading from the buffer with the recv function.
-			timeval timeOutVal;
-			timeOutVal.tv_sec = 0;
-			timeOutVal.tv_usec = timeOut;
 			DWORD timeVal = timeOut;
-			setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeVal, sizeof(timeOutVal));
+			setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeVal, sizeof(timeVal));
 
 			return true;
 		}
