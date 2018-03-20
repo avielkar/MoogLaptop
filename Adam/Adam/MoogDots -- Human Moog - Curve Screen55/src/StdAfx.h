@@ -7,14 +7,16 @@
 #ifndef STDAFX
 #define STDAFX
 
-#include "MatlabTcpCommunicator.h"
+#define _WINSOCK2API_
 
 #include "Application.hpp"
 #include "InputHandlers.hpp"
 #include "RenderContext.hpp"
 #include "ShaderManager.hpp"
-//#define _WINSOCK2API_
 #include "OculusVR.hpp"
+
+//MatlabTcpCommunication
+#include "MatlabTcpCommunicator.h"
 
 // wxWindows
 #include <wx\wxprec.h>
@@ -32,7 +34,7 @@
 #include <gl\glut.h>
 
 // ComputerBoards
-#include <cbw.h>
+#include "cbw.h"
 
 // Moog
 #include <MoogCom.h>
@@ -41,7 +43,6 @@
 // Matlab
 #include <engine.h>
 #include <MatlabRDX.h>
-
 
 void Delay(double ms);
 

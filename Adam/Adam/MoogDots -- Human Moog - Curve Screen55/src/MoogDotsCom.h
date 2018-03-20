@@ -14,8 +14,8 @@
 
 using namespace std;
 using namespace LPTInterface;
-using namespace MatlabCommunicator;
-using namespace IpCommunication;
+//using namespace MatlabCommunicator;
+//using namespace IpCommunication;
 
 #define TINY_NUMBER 0.0001f
 #define HEAVE_OFFSET 69.3028
