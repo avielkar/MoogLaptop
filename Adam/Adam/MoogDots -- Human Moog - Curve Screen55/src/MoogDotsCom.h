@@ -19,8 +19,8 @@
 
 using namespace std;
 using namespace LPTInterface;
-//using namespace MatlabCommunicator;
-//using namespace IpCommunication;
+using namespace MatlabCommunicator;
+using namespace IpCommunication;
 
 #define TINY_NUMBER 0.0001f
 #define HEAVE_OFFSET 69.3028
@@ -159,7 +159,7 @@ private:
 	bool m_previousBitLow;				// Keeps track of what the previous stop bit was.
 
 	CMatlabRDX *m_matlabRDX;		//Long
-	//MatlabTcpCommunicator* m_matlabTcpCommunicator;
+	MatlabTcpCommunicator* m_matlabTcpCommunicator;
 	/*CMatlabRDX *m_matlabRDXHeave;
 	CMatlabRDX *m_matlabRDXSurge;
 	CMatlabRDX *m_matlabRDXLat;

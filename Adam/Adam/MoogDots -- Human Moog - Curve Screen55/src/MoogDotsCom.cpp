@@ -90,6 +90,7 @@ m_previousBitLow(true)
 #endif
 
 	m_matlabRDX = NULL;
+	m_matlabTcpCommunicator = NULL;
 	/*m_matlabRDXHeave = NULL;
 	m_matlabRDXLat = NULL;
 	m_matlabRDXRoll = NULL;
@@ -749,6 +750,11 @@ void MoogDotsCom::ThreadInit(void)
 		m_matlabRDX = new CMatlabRDX(m_PCI_DIO48H_Object.DIO_board_num);
 	}
 	m_matlabRDX->InitClient(FIRSTPORTB, FIRSTPORTA, SECONDPORTA);
+
+	if (m_matlabTcpCommunicator == NULL)
+	{
+		m_matlabTcpCommunicator = new MatlabTcpCommunicator();
+	}
 
 	//if (m_matlabTcpCommunicator == NULL)
 	{
