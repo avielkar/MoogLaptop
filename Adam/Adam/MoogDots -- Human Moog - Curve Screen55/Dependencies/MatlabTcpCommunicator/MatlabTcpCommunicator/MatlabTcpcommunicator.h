@@ -2,36 +2,44 @@
 #include "TcpServer.h";
 #include "PortsDef.h";
 
+#ifndef MATLABTCPCOMMUNICATOR
+#define MATLABTCPCOMMUNICATOR
+
 using namespace std;
+using namespace IpCommunication;
 
-class MatlabTcpCommunicator
+namespace MatlabCommunicator
 {
-private:
-	//The TcpClient object to communicate with the Matlab server.
-	//
-	TcpClient* m_client;
+	class MatlabTcpCommunicator
+	{
+	private:
+		//The TcpClient object to communicate with the Matlab server.
+		//
+		TcpClient* m_client;
 
-	//Read a byte in the timeOut time.
-	//Return false if no byte in the given timeOut time , otherwise returns true.
-	bool ReadByte(double timeOut, char& data, u_short port);
+		//Read a byte in the timeOut time.
+		//Return false if no byte in the given timeOut time , otherwise returns true.
+		bool ReadByte(double timeOut, char& data, u_short port);
 
-public:
-	//Default constructor.
-	//
-	MatlabTcpCommunicator();
+	public:
+		//Default constructor.
+		//
+		MatlabTcpCommunicator();
 
-	//Connects all the communication ports between the client and the server.
-	//
-	void ConnectClientPortsToServer();
+		//Connects all the communication ports between the client and the server.
+		//
+		void ConnectClientPortsToServer();
 
-	//Closes the clients port that communcate with the Matlab server.
-	//
-	void CloseClientPortsToServer();
+		//Closes the clients port that communcate with the Matlab server.
+		//
+		void CloseClientPortsToServer();
 
-	//This function read a string command from the given port (string command is data untill first '/n' in the buffer).
-	//timeOut - The max time to try reading the line wothout connection.
-	//data - the fisrst command in the buffer.
-	//port - the port number to read the command from.
-	//Returns the number of read bytes int he line (without the '\n' byte).
-	int ReadString(double timeOut, string & data , u_short port);
-};
+		//This function read a string command from the given port (string command is data untill first '/n' in the buffer).
+		//timeOut - The max time to try reading the line wothout connection.
+		//data - the fisrst command in the buffer.
+		//port - the port number to read the command from.
+		//Returns the number of read bytes int he line (without the '\n' byte).
+		int ReadString(double timeOut, string & data, u_short port);
+	};
+}
+#endif

@@ -754,6 +754,13 @@ void MoogDotsCom::ThreadInit(void)
 		m_matlabRDX = new CMatlabRDX(m_PCI_DIO48H_Object.DIO_board_num);
 	}
 	m_matlabRDX->InitClient(FIRSTPORTB, FIRSTPORTA, SECONDPORTA);
+
+	//if (m_matlabTcpCommunicator == NULL)
+	{
+		//m_matlabTcpCommunicator = new MatlabTcpCommunicator();
+
+		//m_matlabTcpCommunicator->ConnectClientPortsToServer();
+	}
 }
 
 
