@@ -3,9 +3,9 @@
 #pragma once
 
 //#include "ParameterList.h"
+#include "StdAfx.h"
 #include "GlobalDefs.h"
 #include "MoogDotsCom.h"
-#include "StdAfx.h"
 
 class CMainPanel : public wxPanel
 {

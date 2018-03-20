@@ -1,5 +1,5 @@
-#include <thread>
 #include "StdAfx.h"
+#include <thread>
 #include "MoogDotsCom.h"
 #include "GLWindow.h"
 #include <fstream>

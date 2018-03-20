@@ -1,5 +1,5 @@
-#include <thread>
 #include "StdAfx.h"
+#include <thread>
 #include "GLWindow.h"
 #include <wx/numdlg.h>
 

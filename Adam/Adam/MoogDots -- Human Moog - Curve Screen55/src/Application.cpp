@@ -1,4 +1,5 @@
 #include "Application.hpp"
+#include "OculusVR.hpp"
 
 extern OculusVR g_oculusVR;
 
