@@ -1,7 +1,7 @@
 #ifndef MOGDOTSCOM
 #define MOGDOTSCOM
 
-
+#include "StdAfx.h"
 #include "GlobalDefs.h"
 #include "GLWindow.h"
 #include "ParameterList.h"
@@ -11,6 +11,11 @@
 #include "Logger.h"
 
 
+#include <thread>
+#include "GLWindow.h"
+#include <fstream>
+#include <stdlib.h>
+#include "libxl.h"
 
 using namespace std;
 using namespace LPTInterface;

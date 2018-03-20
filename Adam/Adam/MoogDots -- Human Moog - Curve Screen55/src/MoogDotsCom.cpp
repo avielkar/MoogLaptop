@@ -1,10 +1,5 @@
-#include "StdAfx.h"
-#include <thread>
 #include "MoogDotsCom.h"
-#include "GLWindow.h"
-#include <fstream>
-#include <stdlib.h>
-#include "libxl.h"
+
 
 
 using namespace libxl;

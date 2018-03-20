@@ -9,7 +9,7 @@
 
 //MatlabTcpCommunication
 #include "MatlabTcpCommunicator.h"
-#define _WINSOCK2API_
+//#define _WINSOCK2API_
 
 #include "Application.hpp"
 #include "InputHandlers.hpp"
