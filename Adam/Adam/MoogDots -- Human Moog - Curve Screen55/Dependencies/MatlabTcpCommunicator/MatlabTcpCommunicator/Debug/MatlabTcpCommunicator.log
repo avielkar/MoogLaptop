@@ -1,5 +1,26 @@
-﻿Build started 3/13/2018 3:20:06 PM.
+﻿Build started 3/20/2018 2:39:44 PM.
+     1>Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\MatlabTcpCommunicator\MatlabTcpCommunicator\MatlabTcpCommunicator.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\Dependencies\IpCommunication\IpCommunication /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\MatlabTcpCommunicator.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\Dependencies\IpCommunication\IpCommunication /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt maincpp.cpp MatlabTcpCommunicator.cpp
+         MatlabTcpCommunicator.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'unsigned long', possible loss of data
+         maincpp.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\MatlabTcpCommunicator\Debug\MatlabTcpCommunicator.lib" /NOLOGO Debug\maincpp.obj
+         Debug\MatlabTcpCommunicator.obj
+         Debug\stdafx.obj
+         MatlabTcpCommunicator.vcxproj -> C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\MatlabTcpCommunicator\Debug\MatlabTcpCommunicator.lib
+     1>Done Building Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\MatlabTcpCommunicator\MatlabTcpCommunicator\MatlabTcpCommunicator.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:02.24

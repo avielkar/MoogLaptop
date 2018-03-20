@@ -7,11 +7,13 @@
 #ifndef STDAFX
 #define STDAFX
 
+#include "MatlabTcpCommunicator.h"
+
 #include "Application.hpp"
 #include "InputHandlers.hpp"
 #include "RenderContext.hpp"
 #include "ShaderManager.hpp"
-#define _WINSOCK2API_
+//#define _WINSOCK2API_
 #include "OculusVR.hpp"
 
 // wxWindows

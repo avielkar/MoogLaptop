@@ -1,19 +1,18 @@
-﻿Build started 3/18/2018 11:16:33 PM.
-     1>Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\IpCommunication\IpCommunication\IpCommunication.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 3/20/2018 2:51:06 PM.
+     1>Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\IpCommunication\IpCommunication\IpCommunication.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TcpClient.cpp TcpServer.cpp
          TcpServer.cpp
          TcpClient.cpp
-     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\ipcommunication\ipcommunication\tcpclient.cpp(38): warning C4244: 'argument' : conversion from 'double' to 'unsigned long', possible loss of data
-     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\ipcommunication\ipcommunication\tcpclient.cpp(49): warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
-     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\ipcommunication\ipcommunication\tcpclient.cpp(50): warning C4244: 'initializing' : conversion from 'double' to 'DWORD', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\ipcommunication\ipcommunication\tcpclient.cpp(40): warning C4244: 'argument' : conversion from 'double' to 'unsigned long', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\ipcommunication\ipcommunication\tcpclient.cpp(49): warning C4244: 'initializing' : conversion from 'double' to 'DWORD', possible loss of data
          Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\IpCommunication\Debug\IpCommunication.lib" ws2_32.lib /NOLOGO Debug\TcpClient.obj
          Debug\TcpServer.obj
          IpCommunication.vcxproj -> C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\IpCommunication\Debug\IpCommunication.lib
-     1>Done Building Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\IpCommunication\IpCommunication\IpCommunication.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\Dependencies\IpCommunication\IpCommunication\IpCommunication.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.89
+Time Elapsed 00:00:02.13

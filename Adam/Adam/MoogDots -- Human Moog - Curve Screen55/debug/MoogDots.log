@@ -1,139 +1,717 @@
-﻿Build started 30/03/2017 18:34:14.
-     1>Project "C:\MoogDotsAllVersions\version2.4.0.0.0\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3/20/2018 8:41:02 PM.
+     1>Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\..\..\..\libxl-3.6.5.0\include_cpp" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_res" /I..\..\..\..\OculusSDK\LibOVRKernel\Src /I..\..\..\..\OculusSDK\LibOVR\Src /I..\..\..\..\OculusSDK\LibOVR\Include /I..\..\..\..\OculusSDK\LibOVR\Include\Extras /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs\SDL\include" /I"C:\Program Files\Measurement Computing\DAQ\C" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\include" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\mswd" /I..\..\..\..\cbw /I..\..\NumericalMethods\NumericalMethods /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\Debug" /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\include" /I"..\..\..\..\glew-1.12.0-win32\glew-1.12.0\include\GL" /I..\MoogCom\src /I..\..\..\..\ /I"C:\Program Files (x86)\MATLAB32bit\R2013b\extern\include" /I"C:\Program Files\MATLAB\R2013b\extern\include" /IC:\Z\Include\Experimental /IC:\Z\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\debug\\" /Fd"..\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MainPanel.cpp MoogDots.cpp MoogDotsCom.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Dependencies\IpCommunication\IpCommunication /I..\Dependencies\MatlabTcpcommunicator\MatlabTcpcommunicator /I"..\..\..\..\libxl-3.6.5.0\include_cpp" /I..\Dependencies\LPTInterface\LPTInterface /I..\..\..\..\MatlabRDX /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs" /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_res" /I..\..\..\..\OculusSDK\LibOVRKernel\Src /I..\..\..\..\OculusSDK\LibOVR\Src /I..\..\..\..\OculusSDK\LibOVR\Include /I..\..\..\..\OculusSDK\LibOVR\Include\Extras /I"..\..\..\..\oculusvr_samples-master\oculusvr_samples-master\common_libs\SDL\include" /I..\Dependencies /I"C:\Program Files\Measurement Computing\DAQ\C" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\include" /I"..\..\..\..\wxMSW-2.6.3-1\wxWidgets-2.6.3\lib\vc_lib\mswd" /I..\..\..\..\cbw /I..\..\NumericalMethods\NumericalMethods /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\Debug" /I"..\..\..\..\freeglut-2.0.1\freeglut-2.0.1\include" /I"..\..\..\..\glew-1.12.0-win32\glew-1.12.0\include\GL" /I..\MoogCom\src /I..\..\..\..\ /I"C:\Program Files (x86)\MATLAB32bit\R2013b\extern\include" /I"C:\Program Files\MATLAB\R2013b\extern\include" /IC:\Z\Include\Experimental /IC:\Z\Include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\debug\\" /Fd"..\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\MoogCom\src\ScriptFile.cpp Application.cpp Camera.cpp CameraDirector.cpp CB_Tools.cpp Font.cpp GLWindow.cpp Grid.cpp InputHandlers.cpp Logger.cpp SDLOVRConfig.h MainPanel.cpp Math.cpp MoogDots.cpp MoogDotsCom.cpp OculusVR.cpp OculusVRDebug.cpp OpenGL.cpp OVRCameraFrustum.cpp OVRTrackerChaperone.cpp ParameterList.cpp RenderContext.cpp ShaderManager.cpp StdAfx.cpp Texture.cpp TextureManager.cpp Utils.cpp
+         Utils.cpp
+         TextureManager.cpp
+         Texture.cpp
+         StdAfx.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+         ShaderManager.cpp
+         RenderContext.cpp
+         ParameterList.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+         OVRTrackerChaperone.cpp
+         OVRCameraFrustum.cpp
+         OpenGL.cpp
+         OculusVRDebug.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         OculusVR.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.cpp(360): warning C4138: '*/' found outside of comment
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.cpp(349): warning C4101: 'f' : unreferenced local variable
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.cpp(475): warning C4060: switch statement contains no 'case' or 'default' labels
          MoogDotsCom.cpp
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(84): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(5): warning C4005: 'GL_OFFSET' : macro redefinition
-                 c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(745): error C2660: 'CMatlabRDX::InitClient' : function does not take 3 arguments
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(933): error C2660: 'CMatlabRDX::ReadString' : function does not take 6 arguments
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2146: syntax error : missing ';' before identifier 'sX'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1343): error C2065: 'sX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2146: syntax error : missing ';' before identifier 'sY'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1344): error C2065: 'sY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2146: syntax error : missing ';' before identifier 'sZ'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1345): error C2065: 'sZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1352): error C2065: 'sX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1352): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1353): error C2065: 'sY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1353): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1354): error C2065: 'sZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1354): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1358): error C3861: 'sX': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1359): error C3861: 'sY': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1360): error C3861: 'sZ': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2146: syntax error : missing ';' before identifier 'sRotX'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1363): error C2065: 'sRotX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2146: syntax error : missing ';' before identifier 'sRotY'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1364): error C2065: 'sRotY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2146: syntax error : missing ';' before identifier 'sRotZ'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1365): error C2065: 'sRotZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1367): error C2065: 'sRotX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1367): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1368): error C2065: 'sRotY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1368): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1369): error C2065: 'sRotZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1369): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1373): error C3861: 'sRotX': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1374): error C3861: 'sRotY': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1375): error C3861: 'sRotZ': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1681): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2146: syntax error : missing ';' before identifier 'sX'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2209): error C2065: 'sX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2146: syntax error : missing ';' before identifier 'sY'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2210): error C2065: 'sY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2146: syntax error : missing ';' before identifier 'sZ'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2211): error C2065: 'sZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2146: syntax error : missing ';' before identifier 'sX'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2217): error C2065: 'sX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2146: syntax error : missing ';' before identifier 'sY'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2218): error C2065: 'sY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2146: syntax error : missing ';' before identifier 'sZ'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2219): error C2065: 'sZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2226): error C2065: 'sX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2226): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2227): error C2065: 'sY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2227): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2228): error C2065: 'sZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2228): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2232): error C3861: 'sX': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2233): error C3861: 'sY': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2234): error C3861: 'sZ': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2146: syntax error : missing ';' before identifier 'sRotX'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2237): error C2065: 'sRotX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2146: syntax error : missing ';' before identifier 'sRotY'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2238): error C2065: 'sRotY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2653: 'tk' : is not a class or namespace name
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2065: 'spline' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2146: syntax error : missing ';' before identifier 'sRotZ'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2239): error C2065: 'sRotZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2241): error C2065: 'sRotX' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2241): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2242): error C2065: 'sRotY' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2242): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2243): error C2065: 'sRotZ' : undeclared identifier
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2243): error C2228: left of '.set_points' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2247): error C3861: 'sRotX': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2248): error C3861: 'sRotY': identifier not found
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2249): error C3861: 'sRotZ': identifier not found
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(119): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(316): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(449): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(473): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(771): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(869): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1054): warning C4101: 'e' : unreferenced local variable
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1171): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1227): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1499): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1695): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1701): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1708): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1713): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1714): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1719): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1724): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1725): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1730): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1735): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1736): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1741): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1747): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1761): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1762): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1775): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1809): warning C4309: 'argument' : truncation of constant value
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1811): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1843): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1844): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1845): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1846): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1847): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1848): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1875): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1876): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1877): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1878): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1879): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1880): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1907): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1917): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1924): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1934): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(1963): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2321): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2422): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdotscom.cpp(2430): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
          MoogDots.cpp
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(84): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(5): warning C4005: 'GL_OFFSET' : macro redefinition
-                 c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdots.cpp(37): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\moogdots.cpp(337): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+         Math.cpp
          MainPanel.cpp
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(84): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(5): warning C4005: 'GL_OFFSET' : macro redefinition
-                 c:\moogdotsallversions\version2.4.0.0.0\moog_doots_reallocated_ver\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+         SDLOVRConfig.h
+         Logger.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\logger.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\logger.cpp(53): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+         InputHandlers.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(96): warning C4005: 'AF_IPX' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(452) : see previous definition of 'AF_IPX'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(136): warning C4005: 'AF_MAX' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(471) : see previous definition of 'AF_MAX'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(173): warning C4005: 'SO_DONTLINGER' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(394) : see previous definition of 'SO_DONTLINGER'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(217): error C2011: 'sockaddr' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(477) : see declaration of 'sockaddr'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(414): error C2059: syntax error : 'constant'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(414): error C3805: 'constant': unexpected token, expected either '}' or a ','
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(549): warning C4005: 'IN_CLASSA' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(279) : see previous definition of 'IN_CLASSA'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(555): warning C4005: 'IN_CLASSB' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(285) : see previous definition of 'IN_CLASSB'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(561): warning C4005: 'IN_CLASSC' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(291) : see previous definition of 'IN_CLASSC'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(572): warning C4005: 'INADDR_ANY' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(296) : see previous definition of 'INADDR_ANY'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(574): warning C4005: 'INADDR_BROADCAST' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(298) : see previous definition of 'INADDR_BROADCAST'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(608): error C2011: 'sockaddr_in' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(304) : see declaration of 'sockaddr_in'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(125): error C2011: 'fd_set' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(60) : see declaration of 'fd_set'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(145): warning C4005: 'FD_CLR' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(89) : see previous definition of 'FD_CLR'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(160): warning C4005: 'FD_SET' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(94) : see previous definition of 'FD_SET'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(169): error C2011: 'timeval' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(103) : see declaration of 'timeval'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(225): error C2011: 'hostent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(159) : see declaration of 'hostent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(238): error C2011: 'netent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(172) : see declaration of 'netent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(245): error C2011: 'servent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(179) : see declaration of 'servent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(257): error C2011: 'protoent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(191) : see declaration of 'protoent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(353): error C2011: 'WSAData' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(314) : see declaration of 'WSAData'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(451): error C2011: 'sockproto' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(486) : see declaration of 'sockproto'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(493): error C2011: 'linger' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(523) : see declaration of 'linger'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(506): warning C4005: 'SOMAXCONN' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(536) : see previous definition of 'SOMAXCONN'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(540): warning C4005: 'FD_READ' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(554) : see previous definition of 'FD_READ'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(543): warning C4005: 'FD_WRITE' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(555) : see previous definition of 'FD_WRITE'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(546): warning C4005: 'FD_OOB' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(556) : see previous definition of 'FD_OOB'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(549): warning C4005: 'FD_ACCEPT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(557) : see previous definition of 'FD_ACCEPT'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(552): warning C4005: 'FD_CONNECT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(558) : see previous definition of 'FD_CONNECT'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(555): warning C4005: 'FD_CLOSE' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(559) : see previous definition of 'FD_CLOSE'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1581): error C2375: 'accept' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(734) : see declaration of 'accept'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1603): error C2375: 'bind' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(739) : see declaration of 'bind'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1622): error C2375: 'closesocket' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(744) : see declaration of 'closesocket'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1641): error C2375: 'connect' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(746) : see declaration of 'connect'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1662): error C2375: 'ioctlsocket' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(751) : see declaration of 'ioctlsocket'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1683): error C2375: 'getpeername' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(756) : see declaration of 'getpeername'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1704): error C2375: 'getsockname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(761) : see declaration of 'getsockname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1727): error C2375: 'getsockopt' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(766) : see declaration of 'getsockopt'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1748): error C2375: 'htonl' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(773) : see declaration of 'htonl'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1765): error C2375: 'htons' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(775) : see declaration of 'htons'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1782): error C2375: 'inet_addr' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(777) : see declaration of 'inet_addr'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1799): error C2375: 'inet_ntoa' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(779) : see declaration of 'inet_ntoa'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1900): error C2375: 'listen' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(781) : see declaration of 'listen'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1918): error C2375: 'ntohl' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(785) : see declaration of 'ntohl'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1935): error C2375: 'ntohs' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(787) : see declaration of 'ntohs'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1955): error C2375: 'recv' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(789) : see declaration of 'recv'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1980): error C2375: 'recvfrom' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(795) : see declaration of 'recvfrom'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2006): error C2375: 'select' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(803) : see declaration of 'select'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2030): error C2375: 'send' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(810) : see declaration of 'send'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2055): error C2375: 'sendto' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(816) : see declaration of 'sendto'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2081): error C2375: 'setsockopt' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(824) : see declaration of 'setsockopt'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2103): error C2375: 'shutdown' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(831) : see declaration of 'shutdown'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2124): error C2375: 'socket' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(835) : see declaration of 'socket'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2148): error C2375: 'gethostbyaddr' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(842) : see declaration of 'gethostbyaddr'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2167): error C2375: 'gethostbyname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(847) : see declaration of 'gethostbyname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2185): error C2375: 'gethostname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(849) : see declaration of 'gethostname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2225): error C2375: 'getservbyport' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(853) : see declaration of 'getservbyport'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2244): error C2375: 'getservbyname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(857) : see declaration of 'getservbyname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2262): error C2375: 'getprotobynumber' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(861) : see declaration of 'getprotobynumber'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2279): error C2375: 'getprotobyname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(863) : see declaration of 'getprotobyname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2300): error C2375: 'WSAStartup' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(867) : see declaration of 'WSAStartup'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2319): error C2375: 'WSACleanup' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(871) : see declaration of 'WSACleanup'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2336): error C2375: 'WSASetLastError' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(873) : see declaration of 'WSASetLastError'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2353): error C2375: 'WSAGetLastError' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(875) : see declaration of 'WSAGetLastError'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2370): error C2375: 'WSAIsBlocking' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(877) : see declaration of 'WSAIsBlocking'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2387): error C2375: 'WSAUnhookBlockingHook' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(879) : see declaration of 'WSAUnhookBlockingHook'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2404): error C2375: 'WSASetBlockingHook' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(881) : see declaration of 'WSASetBlockingHook'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2421): error C2375: 'WSACancelBlockingCall' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(883) : see declaration of 'WSACancelBlockingCall'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2443): error C2375: 'WSAAsyncGetServByName' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(885) : see declaration of 'WSAAsyncGetServByName'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2470): error C2375: 'WSAAsyncGetServByPort' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(893) : see declaration of 'WSAAsyncGetServByPort'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2496): error C2375: 'WSAAsyncGetProtoByName' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(901) : see declaration of 'WSAAsyncGetProtoByName'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2521): error C2375: 'WSAAsyncGetProtoByNumber' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(908) : see declaration of 'WSAAsyncGetProtoByNumber'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2546): error C2375: 'WSAAsyncGetHostByName' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(915) : see declaration of 'WSAAsyncGetHostByName'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2573): error C2375: 'WSAAsyncGetHostByAddr' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(922) : see declaration of 'WSAAsyncGetHostByAddr'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2596): error C2375: 'WSACancelAsyncRequest' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(931) : see declaration of 'WSACancelAsyncRequest'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2616): error C2375: 'WSAAsyncSelect' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(933) : see declaration of 'WSAAsyncSelect'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(80): error C2079: 'sockaddr_gen::Address' uses undefined struct 'sockaddr'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(81): error C2079: 'sockaddr_gen::AddressIn' uses undefined struct 'sockaddr_in'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(124): warning C4005: 'IP_TOS' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(344) : see previous definition of 'IP_TOS'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(125): warning C4005: 'IP_TTL' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(343) : see previous definition of 'IP_TTL'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(126): warning C4005: 'IP_MULTICAST_IF' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(338) : see previous definition of 'IP_MULTICAST_IF'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(127): warning C4005: 'IP_MULTICAST_TTL' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(339) : see previous definition of 'IP_MULTICAST_TTL'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(128): warning C4005: 'IP_MULTICAST_LOOP' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(340) : see previous definition of 'IP_MULTICAST_LOOP'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(129): warning C4005: 'IP_ADD_MEMBERSHIP' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(341) : see previous definition of 'IP_ADD_MEMBERSHIP'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(130): warning C4005: 'IP_DROP_MEMBERSHIP' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(342) : see previous definition of 'IP_DROP_MEMBERSHIP'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(131): warning C4005: 'IP_DONTFRAGMENT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(345) : see previous definition of 'IP_DONTFRAGMENT'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(202): error C2079: '_SOCKADDR_INET::Ipv4' uses undefined struct 'sockaddr_in'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(715): error C2011: 'ip_mreq' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(355) : see declaration of 'ip_mreq'
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(696): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(703): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(742): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(749): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(793): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(800): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(841): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(848): error C3861: 'WSASetLastError': identifier not found
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\moogcom\src\mbc_interface.h(205): error C2079: 'CMBCInterface::m_destAddress' uses undefined struct 'sockaddr_in'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\moogcom\src\mbc_interface.h(206): error C2079: 'CMBCInterface::m_localAddress' uses undefined struct 'sockaddr_in'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+         Grid.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
          Generating Code...
-     1>Done Building Project "C:\MoogDotsAllVersions\version2.4.0.0.0\MOOG_DOOTS_REALLOCATED_VER\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" (Build target(s)) -- FAILED.
+         Compiling...
+         GLWindow.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(74): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(174): warning C4101: 'freq' : unreferenced local variable
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(174): warning C4101: 'finish' : unreferenced local variable
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(174): warning C4101: 'start' : unreferenced local variable
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(380): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1010): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1140): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1162): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1236): warning C4800: 'double' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1300): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1384): warning C4003: not enough actual parameters for macro 'WRITE_LOG'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\glwindow.cpp(1861): warning C4996: '_gcvt': This function or variable may be unsafe. Consider using _gcvt_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(786) : see declaration of '_gcvt'
+         Font.cpp
+         CB_Tools.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\cb_tools.cpp(38): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(253) : see declaration of 'stricmp'
+         CameraDirector.cpp
+         Camera.cpp
+         Application.cpp
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(96): warning C4005: 'AF_IPX' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(452) : see previous definition of 'AF_IPX'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(136): warning C4005: 'AF_MAX' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(471) : see previous definition of 'AF_MAX'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(173): warning C4005: 'SO_DONTLINGER' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(394) : see previous definition of 'SO_DONTLINGER'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(217): error C2011: 'sockaddr' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(477) : see declaration of 'sockaddr'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(414): error C2059: syntax error : 'constant'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(414): error C3805: 'constant': unexpected token, expected either '}' or a ','
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(549): warning C4005: 'IN_CLASSA' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(279) : see previous definition of 'IN_CLASSA'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(555): warning C4005: 'IN_CLASSB' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(285) : see previous definition of 'IN_CLASSB'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(561): warning C4005: 'IN_CLASSC' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(291) : see previous definition of 'IN_CLASSC'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(572): warning C4005: 'INADDR_ANY' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(296) : see previous definition of 'INADDR_ANY'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(574): warning C4005: 'INADDR_BROADCAST' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(298) : see previous definition of 'INADDR_BROADCAST'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2def.h(608): error C2011: 'sockaddr_in' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(304) : see declaration of 'sockaddr_in'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(125): error C2011: 'fd_set' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(60) : see declaration of 'fd_set'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(145): warning C4005: 'FD_CLR' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(89) : see previous definition of 'FD_CLR'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(160): warning C4005: 'FD_SET' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(94) : see previous definition of 'FD_SET'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(169): error C2011: 'timeval' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(103) : see declaration of 'timeval'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(225): error C2011: 'hostent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(159) : see declaration of 'hostent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(238): error C2011: 'netent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(172) : see declaration of 'netent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(245): error C2011: 'servent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(179) : see declaration of 'servent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(257): error C2011: 'protoent' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(191) : see declaration of 'protoent'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(353): error C2011: 'WSAData' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(314) : see declaration of 'WSAData'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(451): error C2011: 'sockproto' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(486) : see declaration of 'sockproto'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(493): error C2011: 'linger' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(523) : see declaration of 'linger'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(506): warning C4005: 'SOMAXCONN' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(536) : see previous definition of 'SOMAXCONN'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(540): warning C4005: 'FD_READ' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(554) : see previous definition of 'FD_READ'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(543): warning C4005: 'FD_WRITE' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(555) : see previous definition of 'FD_WRITE'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(546): warning C4005: 'FD_OOB' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(556) : see previous definition of 'FD_OOB'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(549): warning C4005: 'FD_ACCEPT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(557) : see previous definition of 'FD_ACCEPT'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(552): warning C4005: 'FD_CONNECT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(558) : see previous definition of 'FD_CONNECT'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(555): warning C4005: 'FD_CLOSE' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(559) : see previous definition of 'FD_CLOSE'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1581): error C2375: 'accept' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(734) : see declaration of 'accept'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1603): error C2375: 'bind' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(739) : see declaration of 'bind'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1622): error C2375: 'closesocket' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(744) : see declaration of 'closesocket'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1641): error C2375: 'connect' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(746) : see declaration of 'connect'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1662): error C2375: 'ioctlsocket' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(751) : see declaration of 'ioctlsocket'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1683): error C2375: 'getpeername' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(756) : see declaration of 'getpeername'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1704): error C2375: 'getsockname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(761) : see declaration of 'getsockname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1727): error C2375: 'getsockopt' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(766) : see declaration of 'getsockopt'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1748): error C2375: 'htonl' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(773) : see declaration of 'htonl'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1765): error C2375: 'htons' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(775) : see declaration of 'htons'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1782): error C2375: 'inet_addr' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(777) : see declaration of 'inet_addr'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1799): error C2375: 'inet_ntoa' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(779) : see declaration of 'inet_ntoa'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1900): error C2375: 'listen' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(781) : see declaration of 'listen'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1918): error C2375: 'ntohl' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(785) : see declaration of 'ntohl'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1935): error C2375: 'ntohs' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(787) : see declaration of 'ntohs'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1955): error C2375: 'recv' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(789) : see declaration of 'recv'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1980): error C2375: 'recvfrom' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(795) : see declaration of 'recvfrom'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2006): error C2375: 'select' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(803) : see declaration of 'select'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2030): error C2375: 'send' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(810) : see declaration of 'send'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2055): error C2375: 'sendto' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(816) : see declaration of 'sendto'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2081): error C2375: 'setsockopt' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(824) : see declaration of 'setsockopt'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2103): error C2375: 'shutdown' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(831) : see declaration of 'shutdown'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2124): error C2375: 'socket' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(835) : see declaration of 'socket'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2148): error C2375: 'gethostbyaddr' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(842) : see declaration of 'gethostbyaddr'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2167): error C2375: 'gethostbyname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(847) : see declaration of 'gethostbyname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2185): error C2375: 'gethostname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(849) : see declaration of 'gethostname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2225): error C2375: 'getservbyport' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(853) : see declaration of 'getservbyport'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2244): error C2375: 'getservbyname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(857) : see declaration of 'getservbyname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2262): error C2375: 'getprotobynumber' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(861) : see declaration of 'getprotobynumber'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2279): error C2375: 'getprotobyname' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(863) : see declaration of 'getprotobyname'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2300): error C2375: 'WSAStartup' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(867) : see declaration of 'WSAStartup'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2319): error C2375: 'WSACleanup' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(871) : see declaration of 'WSACleanup'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2336): error C2375: 'WSASetLastError' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(873) : see declaration of 'WSASetLastError'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2353): error C2375: 'WSAGetLastError' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(875) : see declaration of 'WSAGetLastError'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2370): error C2375: 'WSAIsBlocking' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(877) : see declaration of 'WSAIsBlocking'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2387): error C2375: 'WSAUnhookBlockingHook' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(879) : see declaration of 'WSAUnhookBlockingHook'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2404): error C2375: 'WSASetBlockingHook' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(881) : see declaration of 'WSASetBlockingHook'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2421): error C2375: 'WSACancelBlockingCall' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(883) : see declaration of 'WSACancelBlockingCall'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2443): error C2375: 'WSAAsyncGetServByName' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(885) : see declaration of 'WSAAsyncGetServByName'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2470): error C2375: 'WSAAsyncGetServByPort' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(893) : see declaration of 'WSAAsyncGetServByPort'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2496): error C2375: 'WSAAsyncGetProtoByName' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(901) : see declaration of 'WSAAsyncGetProtoByName'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2521): error C2375: 'WSAAsyncGetProtoByNumber' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(908) : see declaration of 'WSAAsyncGetProtoByNumber'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2546): error C2375: 'WSAAsyncGetHostByName' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(915) : see declaration of 'WSAAsyncGetHostByName'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2573): error C2375: 'WSAAsyncGetHostByAddr' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(922) : see declaration of 'WSAAsyncGetHostByAddr'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2596): error C2375: 'WSACancelAsyncRequest' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(931) : see declaration of 'WSACancelAsyncRequest'
+     1>c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(2616): error C2375: 'WSAAsyncSelect' : redefinition; different linkage
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(933) : see declaration of 'WSAAsyncSelect'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(80): error C2079: 'sockaddr_gen::Address' uses undefined struct 'sockaddr'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(81): error C2079: 'sockaddr_gen::AddressIn' uses undefined struct 'sockaddr_in'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(124): warning C4005: 'IP_TOS' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(344) : see previous definition of 'IP_TOS'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(125): warning C4005: 'IP_TTL' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(343) : see previous definition of 'IP_TTL'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(126): warning C4005: 'IP_MULTICAST_IF' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(338) : see previous definition of 'IP_MULTICAST_IF'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(127): warning C4005: 'IP_MULTICAST_TTL' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(339) : see previous definition of 'IP_MULTICAST_TTL'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(128): warning C4005: 'IP_MULTICAST_LOOP' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(340) : see previous definition of 'IP_MULTICAST_LOOP'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(129): warning C4005: 'IP_ADD_MEMBERSHIP' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(341) : see previous definition of 'IP_ADD_MEMBERSHIP'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(130): warning C4005: 'IP_DROP_MEMBERSHIP' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(342) : see previous definition of 'IP_DROP_MEMBERSHIP'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(131): warning C4005: 'IP_DONTFRAGMENT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(345) : see previous definition of 'IP_DONTFRAGMENT'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(202): error C2079: '_SOCKADDR_INET::Ipv4' uses undefined struct 'sockaddr_in'
+     1>c:\program files (x86)\windows kits\8.1\include\shared\ws2ipdef.h(715): error C2011: 'ip_mreq' : 'struct' type redefinition
+                 c:\program files (x86)\windows kits\8.1\include\um\winsock.h(355) : see declaration of 'ip_mreq'
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(696): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(703): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(742): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(749): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(793): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(800): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(841): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\windows kits\8.1\include\um\ws2tcpip.h(848): error C3861: 'WSASetLastError': identifier not found
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\matlabtcpcommunicator.h(3): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(85): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(86): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\oculusvr.hpp(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(348): warning C4005: 'FIRSTPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(4) : see previous definition of 'FIRSTPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(349): warning C4005: 'FIRSTPORTB' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(7) : see previous definition of 'FIRSTPORTB'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(350): warning C4005: 'FIRSTPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(10) : see previous definition of 'FIRSTPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(351): warning C4005: 'FIRSTPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(13) : see previous definition of 'FIRSTPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(352): warning C4005: 'SECONDPORTA' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(5) : see previous definition of 'SECONDPORTA'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(354): warning C4005: 'SECONDPORTCL' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(11) : see previous definition of 'SECONDPORTCL'
+     1>c:\users\adamlab\documents\github\mooglaptop\matlabrdx\cbw.h(355): warning C4005: 'SECONDPORTCH' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\dependencies\matlabtcpcommunicator\matlabtcpcommunicator\portsdef.h(14) : see previous definition of 'SECONDPORTCH'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\moogcom\src\mbc_interface.h(205): error C2079: 'CMBCInterface::m_destAddress' uses undefined struct 'sockaddr_in'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\moogcom\src\mbc_interface.h(206): error C2079: 'CMBCInterface::m_localAddress' uses undefined struct 'sockaddr_in'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(8): warning C4005: 'GL_OFFSET' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\oculusvr_samples-master\oculusvr_samples-master\common_libs\glew-1.11.0\include\gl\glew.h(5439) : see previous definition of 'GL_OFFSET'
+     1>c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(15): warning C4005: 'GET_DATA_FRAME' : macro redefinition
+                 c:\users\adamlab\documents\github\mooglaptop\adam\adam\moogdots -- human moog - curve screen55\src\globaldefs.h(13) : see previous definition of 'GET_DATA_FRAME'
+         ScriptFile.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\AdamLab\Documents\GitHub\MoogLaptop\Adam\Adam\MoogDots -- Human Moog - Curve Screen55\src\MoogDots.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:03.39
+Time Elapsed 00:00:28.93
