@@ -1,7 +1,5 @@
 #include "MoogDotsCom.h"
 
-
-
 using namespace libxl;
 
 extern OculusVR g_oculusVR;
@@ -20,7 +18,6 @@ extern CParameterList g_pList;
 
 int startClk = 0;
 int finishClk = 0;
-#include <ctime>
 
 MoogDotsCom::MoogDotsCom(char *mbcIP, int mbcPort, char *localIP, int localPort , Logger* logger ,  bool useCustomTimer) :
 CORE_CONSTRUCTOR, m_glWindowExists(false), m_isLibLoaded(false), m_messageConsole(NULL),
@@ -91,17 +88,6 @@ m_previousBitLow(true)
 
 	m_matlabRDX = NULL;
 	m_matlabTcpCommunicator = NULL;
-	/*m_matlabRDXHeave = NULL;
-	m_matlabRDXLat = NULL;
-	m_matlabRDXRoll = NULL;
-	m_matlabRDXSurge = NULL;
-	m_matlabRDXYaw = NULL;*/
-
-	//GLPanel *g = m_glWindow->GetGLPanel();
-	//g->curve_screen = g_pList.GetVectorData("CURVE_SCREEN_ON")[0];
-	//g->curve_screen_space = g_pList.GetVectorData("CURVE_SCREEN_SPACE")[0];
-	//g->enableGrid = g_pList.GetVectorData("ENABLE_GRID")[0];
-	//g->SetupCallList(TEXTURE);
 
 	//init the LPT controller for the EEG.
 	m_EEGLptContoller = new LPTCOntroller();
@@ -155,13 +141,11 @@ MoogDotsCom::~MoogDotsCom()
 	}
 }
 
-
 void MoogDotsCom::ReloadCallLists(unsigned int objects)
 {
 	m_objects2change = objects;
 	m_reloadCallLists = true;
 }
-
 
 #if !CUSTOM_TIMER
 void MoogDotsCom::InitVSync()
@@ -180,7 +164,6 @@ void MoogDotsCom::InitVSync()
 	}
 }
 
-
 void MoogDotsCom::SetVSyncState(bool enable)
 {
 	if (enable) {
@@ -191,19 +174,16 @@ void MoogDotsCom::SetVSyncState(bool enable)
 	}
 }
 
-
 bool MoogDotsCom::VSyncEnabled()
 {
 	return (wglGetSwapIntervalEXT() > 0);
 }
 #endif
 
-
 void MoogDotsCom::ListenMode(bool value)
 {
 	m_listenMode = value;
 }
-
 
 void MoogDotsCom::ShowGLWindow(bool value)
 {
@@ -211,8 +191,6 @@ void MoogDotsCom::ShowGLWindow(bool value)
 		m_glWindow->Show(value);
 	}
 }
-
-
 
 void MoogDotsCom::InitTempo()
 {
@@ -294,18 +272,15 @@ void MoogDotsCom::InitTempo()
 	}
 }
 
-
 void MoogDotsCom::SetConsolePointer(wxListBox *messageConsole)
 {
 	m_messageConsole = messageConsole;
 }
 
-
 void MoogDotsCom::SetVerbosity(bool value)
 {
 	m_verboseMode = value;
 }
-
 
 StarField MoogDotsCom::createStarField()
 {
@@ -367,7 +342,6 @@ StarField MoogDotsCom::createStarField()
 	return s;
 }
 
-
 Cylinders MoogDotsCom::createCylinders()
 {
 	Cylinders c;
@@ -390,7 +364,6 @@ Cylinders MoogDotsCom::createCylinders()
 
 	return c;
 }
-
 
 Floor MoogDotsCom::createFloor()
 {
@@ -438,8 +411,6 @@ void MoogDotsCom::createGrid(Grid& gr)
 
 }
 
-
-
 Frustum MoogDotsCom::createFrustum()
 {
 	WRITE_LOG(m_logger->m_logger, "Creating frustrum");
@@ -462,7 +433,6 @@ Frustum MoogDotsCom::createFrustum()
 
 	return f;
 }
-
 
 void MoogDotsCom::UpdateGLScene(bool doSwapBuffers)
 {
@@ -593,7 +563,6 @@ void MoogDotsCom::UpdateGLScene(bool doSwapBuffers)
 	else UseMoogCtrlTimer(false);
 }
 
-
 bool MoogDotsCom::compareFrustums(Frustum a, Frustum b) const
 {
 	// Compare every element in the two Frustums.
@@ -680,7 +649,6 @@ bool MoogDotsCom::compareGrid(Grid a, Grid b) const
 	return equalGrid;
 }
 
-
 void MoogDotsCom::Sync()
 {
 	// Sync to a SwapBuffers() call.
@@ -690,7 +658,6 @@ void MoogDotsCom::Sync()
 	SetVSyncState(false);
 	Delay(m_delay);
 }
-
 
 void MoogDotsCom::ThreadInit(void)
 {
@@ -754,6 +721,8 @@ void MoogDotsCom::ThreadInit(void)
 	if (m_matlabTcpCommunicator == NULL)
 	{
 		m_matlabTcpCommunicator = new MatlabTcpCommunicator();
+
+		m_matlabTcpCommunicator->ConnectClientPortsToServer();
 	}
 
 	//if (m_matlabTcpCommunicator == NULL)
@@ -763,7 +732,6 @@ void MoogDotsCom::ThreadInit(void)
 		//m_matlabTcpCommunicator->ConnectClientPortsToServer();
 	}
 }
-
 
 #if USE_MATLAB | USE_MATLAB_INTERPOLATION
 
@@ -785,7 +753,6 @@ void MoogDotsCom::StartMatlab()
 	*/
 	engEvalString(m_engine, "enableservice('AutomationServer' , true)");
 }
-
 
 void MoogDotsCom::CloseMatlab()
 {
@@ -864,7 +831,6 @@ void MoogDotsCom::stuffDoubleVector(vector<double> data, const char *variable)
 #endif				//USE_MATLAB
 #endif // USE_MATLAB _ USE_MATLAB_INTERPOLATION
 
-
 bool MoogDotsCom::CheckForEStop()
 {
 	WRITE_LOG(m_logger->m_logger, "Checking for ESTOP");
@@ -916,7 +882,6 @@ bool MoogDotsCom::CheckForEStop()
 	return eStopActivated;
 }
 
-
 void MoogDotsCom::Control()
 {
 	string command;
@@ -953,7 +918,8 @@ void MoogDotsCom::Control()
 		do {
 			// Do the RDX stuff if we have a valid tempo handle and we actually received
 			// something on the buffer.
-			if (m_matlabRDX->ReadString(1.0, 64, &command, FIRSTPORTB, FIRSTPORTA, SECONDPORTA) > 0) {
+			//if (m_matlabRDX->ReadString(1.0, 64, &command, FIRSTPORTB, FIRSTPORTA, SECONDPORTA) > 0) {
+			if (m_matlabTcpCommunicator->ReadString(1000, command, 7090) > 0) {
 				string keyword, param;
 				int spaceIndex, tmpIndex, tmpEnd;
 				double convertedValue;
@@ -1166,7 +1132,6 @@ void MoogDotsCom::Control()
 	}
 } // End void MoogDotsCom::Control()
 
-
 void MoogDotsCom::UpdateMovement()
 {
 	WRITE_LOG(m_logger->m_logger, "Updating movement...");
@@ -1221,7 +1186,6 @@ void MoogDotsCom::UpdateMovement()
 		ThreadDoCompute(RECEIVE_COMPUTE | COMPUTE);
 	}
 }
-
 
 void MoogDotsCom::GenerateMovement()
 {
@@ -1437,7 +1401,6 @@ void MoogDotsCom::GenerateMovement()
 
 	AddNoise();
 }
-
 
 void MoogDotsCom::GenerateBufferedStop()
 {
@@ -2201,7 +2164,6 @@ void MoogDotsCom::Compute()
 	} // if (m_data.index < (int)m_data.X.size())
 } // End void MoogDotsCom::Compute()
 
-
 #if !MINI_MOOG_SYSTEM
 void MoogDotsCom::ReceiveCompute()
 {
@@ -2273,7 +2235,6 @@ void MoogDotsCom::ReceiveCompute()
 } // ReceiveCompute()
 #endif
 
-
 void MoogDotsCom::CustomTimer()
 {
 #if CUSTOM_TIMER
@@ -2297,7 +2258,6 @@ void MoogDotsCom::CustomTimer()
 #endif
 }
 
-
 string MoogDotsCom::replaceInvalidChars(string s)
 {
 	int i;
@@ -2315,7 +2275,6 @@ string MoogDotsCom::replaceInvalidChars(string s)
 
 	return s;
 }
-
 
 void MoogDotsCom::MovePlatformToOrigin()
 {
@@ -2354,7 +2313,6 @@ void MoogDotsCom::MovePlatformToOrigin()
 #endif
 
 }
-
 
 void MoogDotsCom::MovePlatform(DATA_FRAME *destination)
 {
@@ -2483,7 +2441,6 @@ void MoogDotsCom::MovePlatform(DATA_FRAME *destination)
 	////////////////////////////////////////////////////////////////////////////////////////end of interpolated version///////////////////////////////////////////////////////////////////
 }
 
-
 vector<double> MoogDotsCom::convertPolar2Vector(double elevation, double azimuth, double magnitude)
 {
 	vector<double> convertedVector;
@@ -2505,7 +2462,6 @@ vector<double> MoogDotsCom::convertPolar2Vector(double elevation, double azimuth
 
 	return convertedVector;
 }
-
 
 double MoogDotsCom::deg2rad(double deg)
 {

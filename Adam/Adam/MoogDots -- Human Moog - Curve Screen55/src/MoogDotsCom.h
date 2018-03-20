@@ -17,6 +17,8 @@
 #include <stdlib.h>
 #include "libxl.h"
 
+#include <ctime>
+
 using namespace std;
 using namespace LPTInterface;
 using namespace MatlabCommunicator;
@@ -160,11 +162,6 @@ private:
 
 	CMatlabRDX *m_matlabRDX;		//Long
 	MatlabTcpCommunicator* m_matlabTcpCommunicator;
-	/*CMatlabRDX *m_matlabRDXHeave;
-	CMatlabRDX *m_matlabRDXSurge;
-	CMatlabRDX *m_matlabRDXLat;
-	CMatlabRDX *m_matlabRDXRoll;
-	CMatlabRDX *m_matlabRDXYaw;*/
 
 	//the controller for the lpt port to send data with it to the EEG.
 	LPTCOntroller* m_EEGLptContoller;
