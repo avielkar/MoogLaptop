@@ -52,6 +52,15 @@ using namespace IpCommunication;
 #define EEG_TRIAL_NUMBER_LSB_OFFSET	0x01
 
 
+enum CommandRecognitionType 
+{
+	Valid,
+
+	UnknownType,
+
+	Invalid
+};
+
 
 class MoogDotsCom : public CORE_CLASS
 {
@@ -120,7 +129,8 @@ private:
 	bool m_forwardMovement = true;							//indicate if the MBC is now going to move forward or if it has finished the forward movement.
 	DATA_FRAME m_finalForwardMovementPosition;				//the last forward position in the forward trajectory.
 	
-	unsigned short int* orientationsBytesArray = new unsigned short int[sizeof(ovrQuatf) / 2 * 500];			//avi : for the eyes orientation trace.
+	ovrQuatf m_eyeOrientationQuaternion;					//avi : for the eyes orientation trace.
+	unsigned short int* m_orientationsBytesArray = new unsigned short int[sizeof(ovrQuatf) / 2 * 500];			//avi : for the eyes orientation trace.
 public:
 #if USE_MATLAB | USE_MATLAB_INTERPOLATION
 	Engine *m_engine;										// Matlab engine for matlab computation.
@@ -176,6 +186,9 @@ public:
 	// Creates a new Matlab engine.
 	void StartMatlab();
 
+	//Plots the trajevtory of ther current trial with the Matlab engine.
+	void PlotTrajectoryGraph();
+
 	// Closes the existing Matlab engine.
 	void CloseMatlab();
 
@@ -228,11 +241,36 @@ public:
 	// ************************************************************************ //
 	void SetVerbosity(bool value);
 
-	// Updates how the Moog should move, if at all.
+	//Updates how the Moog should move, if at all.
+	//
 	void UpdateMovement();
 
+	//Add an item to the message console.
+	//
+	void AddItemToConsole(string command);
+
+	//Gran commands from the command string for a key with all commands params.
+	void GrabCommand(string command, vector<double>& commandParamsOut, string& keywordOut);
+
+	//Add the commands param with it's keyword to the params list if valid , and return command status validation.
+	//
+	CommandRecognitionType AddCommandParamsToCommandsList(string keyword, vector<double> commandParams);
+
+	//Updates the console box with the command parameters and validation.
+	//
+	void ShowCommandStatusValidation(string command, string keyword, CommandRecognitionType commandRecognitionType);
+
+	//Clear the console windows with the maximum num of items in the console.
+	//
+	void ClearMessageConsoleMaxItems();
+
 	// Cues the thread to reload the call lists.
+	//
 	void ReloadCallLists(unsigned int objects);
+
+	//Updates the statuses members of start trial , waiting , freezing rtc members.
+	//
+	void UpdateStatusesMembers();
 
 // We only use this if we're using the built-in timer.
 #if !CUSTOM_TIMER
@@ -250,24 +288,40 @@ private:
 
 private:
 	// Overrides
+	//
+
+	//Defines the function for start the motion thread and the each frame rendering - making the transfrmations.
+	//
 	virtual void Compute();
 	virtual void CustomTimer();
 	virtual void ThreadInit();
+	
+	//Controls the input output and stuff changes , iclude the message console.
+	//
 	virtual void Control();
 	virtual void Sync();
 	virtual void ReceiveCompute();
 
+	//Check if the Moog is at the given position with the given absolute maximum distance.
+	//
+	bool CheckMoogAtCorrectPosition(MoogFrame* position, double maxDistanceError);
+
 	//Check if the Moog is at the origin with the givem max differential error.
+	//
 	bool CheckMoogAtOrigin(double maxDifferentialError);
-	
+
 	//Check if the Moog is at the final position with the givem max differential error.
+	//
 	bool CheckMoogAtFinal(double maxDifferentialError);
 
 	//Check if the Moog is at the correct position (origin or final) with the givem max differential error.
+	//
 	bool CheckMoogAtCorrectPosition(double maxDifferentialError);
 
 	void SendMBCFrame(int& dataIndex);
 	void SendMBCFrameThread(int dataIndex);
+	void MoveMBCThread();
+
 	void ResetEEGPins(short trialNumber);
 
 	// Checks to see if the E-Stop bit has been set and takes any necessary actions.
@@ -275,6 +329,7 @@ private:
 	bool CheckForEStop();
 
 	// Generates a buffered stop movement.
+	//
 	void GenerateBufferedStop();
 
 	// Moves the platform to the origin and loads the trajectory data received
@@ -282,9 +337,19 @@ private:
 	void GenerateMovement();
 
 	//Splitting 1 byte of data into 2 bytes for not sending indicator data never(see details in the implementation).
+	//
 	void ConvertUnsignedShortArrayToByteArrayDedicatedToCommunication(byte data , byte byteArray[2]);
 
+	//Check Matlab ready to receive Oculus Motion and sending it.
+	//
+	void SendOculusHeadTrackingIfAckedTo();
+
+	//Add the current fram oculus head orientation to the Oculus tracer.
+	//
+	void AddFrameOculusOrientationToCommulativeOculusOrientationTracer();
+
 	//Sending to matlab after each trial the Oculus head motion points (for each frame , the place of the head).
+	//
 	void SendHeadMotionTrackToMatlab(unsigned short* orientationsBytesArray, int size);
 
 	// ************************************************************************ //
@@ -318,15 +383,19 @@ public:
 
 private:
 	// Creates a Frustum object based on the parameter list.
+	//
 	Frustum createFrustum();
 
 	// Creates a new StarField object based on the parameter list.
+	//
 	StarField createStarField();
 
 	// Creates a Floor object based on the parameter list.
+	//
 	Floor createFloor();
 
 	// Creates a Cylinders object based on the parameter list.
+	//
 	Cylinders createCylinders();
 
 	// Compares two Frustums to see if they are equal.  Returns true if equal,
@@ -337,13 +406,16 @@ private:
 	// false otherwise.
 	bool compareStarFields(StarField a, StarField b) const;
 
-	// Compares two Floor objects.  Returns true if equal, false otherwise.
+	//Compares two Floor objects.  Returns true if equal, false otherwise.
+	//
 	bool compareFloors(Floor a, Floor b) const;
 
 	// Compares two Cylinders objects.  Returns true if equal, false otherwise.
+	//
 	bool compareCylinders(Cylinders a, Cylinders b) const;
 
 	// Compares two Grid objects.  Returns true if equal, false otherwise.
+	//
 	bool compareGrid(Grid a, Grid b) const;
 
 
@@ -352,6 +424,7 @@ private:
 	string replaceInvalidChars(string s);
 
 	// Checks to see if a Tempo command has been sent.
+	//
 	string checkTempo();
 
 	// Creates the movement to move the platform from its current
@@ -362,19 +435,19 @@ public:
 	//World world;
 	bool redrawTexture;
 
-	GLWindow* GetGLWindow(void) const
-	{
-		return m_glWindow;
-	}
+	GLWindow* GetGLWindow(void) const;
+
+	void RenderFrameInGlPanel();
+
 	Cube createCube(void);
 
 	void AddNoise();
 
 #if TRAJECTORY_SAFETY_CHECK
 	// check all trajectories from Matlab and find bumping inside
+	//
 	bool CheckTrajectories();
 	bool FindBumping(vector<double> trajectory);
 #endif
 };
-
 #endif

@@ -9,10 +9,9 @@
 #define DATA_FRAME MoogFrame
 #define CORE_CLASS MoogCom
 #define CORE_CONSTRUCTOR MoogCom(mbcIP, mbcPort, localIP, localPort, useCustomTimer)
-#define SET_DATA_FRAME ThreadSetAxesPositions
-#define GET_DATA_FRAME GetAxesPosition
+#define SET_DATA_FRAME SendMBCAxesPositions
+#define GET_FEEDBACK_DATA_FRAME GetAxesFeedbackPosition
 #define THREAD_GET_DATA_FRAME ThreadGetAxesPositions
-#define GET_DATA_FRAME GetAxesPositions
 
 #define DEBUG_DEFAULTS 0
 

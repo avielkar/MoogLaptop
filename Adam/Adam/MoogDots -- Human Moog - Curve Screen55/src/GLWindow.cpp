@@ -156,44 +156,31 @@ GLvoid GLPanel::Render(ovrQuatf& quaternion)
 
 	WRITE_LOG_PARAM(m_logger->m_logger, "Rendering frame", frameCounter);
 
-	double targOffset = 0.0;
-
 	// If star lifetime is up and we flagged the use of star lifetime, then modify some of
 	// the stars.
-	if (m_frameCount++ % m_world.starField.lifetime == 0 && m_world.starField.use_lifetime == 1.0) {
+	if (m_frameCount++ % m_world.starField.lifetime == 0 && m_world.starField.use_lifetime == 1.0) 
+	{
 		ModifyStarField();
 	}
 
-	if (m_frameCount++ % m_world.starField.objectLifetime == 0 && m_world.starField.use_objectLiftime == 1.0) {
+	if (m_frameCount++ % m_world.starField.objectLifetime == 0 && m_world.starField.use_objectLiftime == 1.0) 
+	{
 		ModifySphereField();
 	}
 
-
-	// test texture mapping performance
-	// Determine the high performance counter frequency.
-	LARGE_INTEGER start, finish, freq;
-//	QueryPerformanceFrequency(&freq);
-//	double m_clockFrequency = (double)freq.QuadPart;
-
-//	QueryPerformanceCounter(&start);
-	
-//	for(int i=0; i<100; i++){
 	// Draw the left and right image.
 	DrawEyeImage(LEFT_EYE , quaternion);
 	if(drawingMode == MODE_CURVE_SCREEN) glCallList(m_textureLeftEyeCallList);
 	else if(drawingMode == MODE_ALIGNMENT) TextureMappingGrid(LEFT_EYE);
-//	}
-
-//	QueryPerformanceCounter(&finish);
-//	double duration = (double)(finish.QuadPart - start.QuadPart)/m_clockFrequency;
-//	QueryPerformanceCounter(&finish);
-//	if(counter == 30) wxMessageBox(wxString::Format("%2.15f seconds\ncounter = %d", duration, finish.QuadPart - start.QuadPart), "Confirm", wxOK, NULL);
-	// test end
 
 	DrawEyeImage(RIGHT_EYE);
-	if(drawingMode == MODE_CURVE_SCREEN) glCallList(m_textureRightEyeCallList);
-	else if(drawingMode == MODE_ALIGNMENT) TextureMappingGrid(RIGHT_EYE);
-
+	if (drawingMode == MODE_CURVE_SCREEN)
+	{
+		glCallList(m_textureRightEyeCallList);
+	}
+	else if (drawingMode == MODE_ALIGNMENT){
+		TextureMappingGrid(RIGHT_EYE);
+	}
 
 	glFlush();
 }
@@ -202,50 +189,41 @@ GLvoid GLPanel::DrawEyeImage(int whichEye, ovrQuatf& quaternion)
 {
 	WRITE_LOG_PARAM(m_logger->m_logger, "Drawing eye image", whichEye);
 
-	//m_Lateral = 0;
-	//m_Surge = 0;
-	//m_Heave = 0;
-	//if (whichEye == LEFT_EYE) return;
-
 	double eyePolarity = 1.0;
-	//double targetColor[3] = {0.0, 0.0, 0.0};
 
-	if (whichEye == LEFT_EYE) {
-//#if USE_STEREO
-		if(this->enableStereo == 1.0){
+	if (whichEye == LEFT_EYE) 
+	{
+		if(this->enableStereo == 1.0)
+		{
 			glDrawBuffer(GL_BACK_LEFT);
 		}
-//#else
-		else{
+		else
+		{
             glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
 		}
-//#endif
 		eyePolarity = -1.0;
-		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);		// Clears the current scene.
-		//targetColor[0] = 1.0; // left eye -- red color
 	}
-	else {
-//#if USE_STEREO
-		if(this->enableStereo == 1.0){
+	else
+	{
+		if(this->enableStereo == 1.0)
+		{
 			glDrawBuffer(GL_BACK_RIGHT);
-			//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);		// Clears the current scene.
 		}
-//#else
-		else{
+		else
+		{
 			glColorMask(GL_FALSE, GL_TRUE, GL_FALSE, GL_FALSE);
 		}
-//#endif
-		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);		// Clears the current scene.
-		//targetColor[1] = 1.0; // right eye -- green color
 	}
 
-	if(clearBuffer || renderNow == false)
+	if (clearBuffer || renderNow == false)
+	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);		// Clears the current scene.
+	}
 
 	// Add by Johnny for cutout circle (8/21/07)
 	// If we are using the cutout, we need to setup the stencil buffer.
-	if (m_world.starField.useCutout == true) {
-
+	if (m_world.starField.useCutout == true) 
+	{
 		glPushMatrix();
 
 		// Setup the projection matrix (IO_DIST=0.0).
@@ -291,17 +269,16 @@ GLvoid GLPanel::DrawEyeImage(int whichEye, ovrQuatf& quaternion)
 		// Draw a circle.
 		glColor3d(1.0, 1.0, 1.0);
 		glBegin(GL_TRIANGLE_FAN);
-			//glVertex3d(m_starfield.fixationPointLocation[0] + m_Lateral,
-			//		   m_starfield.fixationPointLocation[1] - m_Heave,
-			//		   );
-			for(double dAngle = 0; dAngle <= 360.0; dAngle += 2.0) {
+		for (double dAngle = 0; dAngle <= 360.0; dAngle += 2.0)
+		{
 				glVertex3d(m_world.starField.cutoutRadius * cos(dAngle*DEG2RAD) + m_world.starField.fixationPointLocation[0] + m_Lateral,
 					       m_world.starField.cutoutRadius * sin(dAngle*DEG2RAD) + m_world.starField.fixationPointLocation[1] - m_Heave,
 						   m_world.starField.fixationPointLocation[2] - m_Surge);
 			}
 		glEnd();
 
-		if (m_world.starField.stayCutout == true){
+		if (m_world.starField.stayCutout == true)
+		{
 			glPopMatrix();
 
 			// for horizontal view
@@ -313,7 +290,8 @@ GLvoid GLPanel::DrawEyeImage(int whichEye, ovrQuatf& quaternion)
 			0.0, 1.0, 0.0); // Which way is up
 		}
 
-		if(m_world.starField.drawCutout == true) {
+		if(m_world.starField.drawCutout == true) 
+		{
 			// Now, allow drawing, where the stencil pattern is equal to 0x1
 			glStencilFunc(GL_EQUAL, 0x1, 0x1);
 			glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
@@ -337,9 +315,9 @@ GLvoid GLPanel::DrawEyeImage(int whichEye, ovrQuatf& quaternion)
 		
 		// Turn smoothing back on to draw the star field.
 		glEnable(GL_POLYGON_SMOOTH);
-
 	}
-	else {
+	else 
+	{
 		glDisable(GL_STENCIL_TEST);
 	}
 	
@@ -348,12 +326,11 @@ GLvoid GLPanel::DrawEyeImage(int whichEye, ovrQuatf& quaternion)
 						   m_world.frustum.clipNear, m_world.frustum.clipFar, static_cast<float>(eyePolarity)*m_world.frustum.eyeSeparation/2.0f,
 						   m_world.frustum.worldOffsetX, m_world.frustum.worldOffsetZ);
 
-	//glViewport(0,0,screenWidth, screenHeight);
-
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	if(rotateView90){// for horizontal view
+	if(rotateView90)
+	{// for horizontal view
 		glPushMatrix();
 		glRotated(90.0, 0.0, 0.0, 1.0);
 	}
@@ -372,7 +349,10 @@ GLvoid GLPanel::DrawEyeImage(int whichEye, ovrQuatf& quaternion)
 	
 	DrawEyeImageObject(whichEye , quaternion);
 
-	if(rotateView90) glPopMatrix();
+	if (rotateView90)
+	{
+		glPopMatrix();
+	}
 }
 
 GLvoid GLPanel::DrawEyeImageObject(int whichEye, ovrQuatf& quaternion , bool rotate, bool drawStayFP)
@@ -1159,7 +1139,8 @@ void GLPanel::ThreadLoop(int numOfTriangles, GLfloat* vertexArray, int numOfVert
 	float farZ,
 	ovrQuatf & resultQuaternion)
  {
-	 WRITE_LOG(m_logger->m_logger, "Entering Thread Loop");
+	 //Delete this log due to a lot of writing to the log file.
+	 /*WRITE_LOG(m_logger->m_logger, "Entering Thread Loop");
 	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop" , numOfTriangles);
 	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", directionX);
 	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", directionY);
@@ -1181,7 +1162,7 @@ void GLPanel::ThreadLoop(int numOfTriangles, GLfloat* vertexArray, int numOfVert
 	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", fixationPointZ);
 	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", zDistanceFromScreen);
 	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", nearZ);
-	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", farZ);
+	 WRITE_LOG_PARAM(m_logger->m_logger, "ThreadLoop", farZ);*/
 
 	 int x = 20; 
 	// while (x>0)

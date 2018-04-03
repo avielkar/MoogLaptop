@@ -119,6 +119,7 @@ private:
 		m_receiveTime;						// Time right after receiving.
 	double m_actuatorData[6],
 		m_dofValues[6];
+	MoogFrame* m_currentMoogFrameCommand;
 	unsigned char m_computeCode;				// Indicates which compute functions are called.
 	CRITICAL_SECTION m_receiveCS,
 		m_comCS;
@@ -127,6 +128,7 @@ private:
 	const char* m_pszParam = NULL;
 	CScriptFile* m_pScriptFile = NULL;
 
+	CConfigFile* m_config;		//The MBC config file.
 	ofstream m_myfile;			//used for making a log fie to trace the program(for bugs detection and for controlling).
 
 
@@ -241,10 +243,11 @@ protected:
 	void SyncNextFrame();
 
 	// Gets the current value of an axis in the command buffer.
+	//
 	float GetAxisPosition(Axis axis);
 
-	// Get the current value of every axis.
-	void GetAxesPositions(MoogFrame *moogFrame);
+	// Get the current value of the command frame sent to the MBC.
+	void GetAxesCommandPosition(MoogFrame *moogFrame);
 
 	//*******************************************************************************//
 	//	The following functions ARE NOT thread safe.  They are intended to be used   //
@@ -261,15 +264,27 @@ protected:
 	double ThreadGetSendTime() const;
 
 	// Gets the current value of every axis.
+	//
 	void ThreadGetAxesPositions(MoogFrame *moogFrame);
 
-	// Sets all the axes at once.
-	void ThreadSetAxesPositions(MoogFrame *moogFrame);
+	//Sets the current executed MBC commands.
+	//
+	void SetCurrentExecutetCommand(MoogFrame* moogFrame);
 
-	//Get the current feedback posiion given by the Moog controller.
-	MoogFrame GetAxesPosition();
+	// Sends the MBC the moog frame to be executed.
+	//
+	void SendMBCAxesPositions(MoogFrame *moogFrame);
+
+	//Convert the coomand moog frame to a MBC command string.
+	//
+	string ConvertFrameToCommand(MoogFrame* commandFrame);
+
+	//Get the current feedback position frame given by the Moog controller.
+	//
+	MoogFrame GetAxesFeedbackPosition();
 
 	// Gets the current value of an axis in the command buffer.
+	//
 	void ThreadSetAxisPosition(Axis axis, float value);
 
 	// Gets the last returned Lateral, Heave, and Surge values in meters.
@@ -284,8 +299,6 @@ protected:
 
 	// Sets which compute functions are called.
 	void ThreadDoCompute(unsigned char code);
-
-	//Sheet* GetExcelPointerSheet(){ return m_sheet; }
 };
 
 #include "MoogCom.inl"
