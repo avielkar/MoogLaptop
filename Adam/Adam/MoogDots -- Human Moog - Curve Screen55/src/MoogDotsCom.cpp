@@ -691,11 +691,6 @@ void MoogDotsCom::ThreadInit(void)
 			d.ShowModal();
 		}
 
-		/*if (wglMakeCurrent((HDC)m_glWindow->GetGLPanel()->GetContext()->GetHDC(), m_threadGLContext) == FALSE) {
-		wxMessageDialog d(NULL, "ThreadInit: Couldn't MakeCurrent.", "GL ERROR");
-		d.ShowModal();
-		}*/
-
 		m_glWindow->GetGLPanel()->SetThreadContext(m_threadGLContext);
 
 		// Initialize the GL Session.
@@ -980,7 +975,7 @@ void MoogDotsCom::Control()
 		{
 			// Do the RDX stuff if we have a valid tempo handle and we actually received
 			// something on the buffer.
-			if (m_matlabRDX->ReadString(1.0, 64, &command, FIRSTPORTB, FIRSTPORTA, SECONDPORTA) > 0) 
+			if (m_matlabTcpCommunicator->ReadString(1000 , command , 7090)  >  0) 
 			{
 				string keyword;
 				vector<double> commandParams;
