@@ -18,7 +18,7 @@ namespace IpCommunication
 		}
 	}
 
-	bool TcpClient::ConnectToHostThread(u_short port, const char * ip, double timeOut)
+	bool TcpClient::ConnectToHostThread(u_short port, const char * ip, double timeOutRequest , double timeOutSocket)
 	{
 		//socket adress information
 		sockaddr_in target;
@@ -37,7 +37,7 @@ namespace IpCommunication
 
 		Timer timer;
 		timer.start();
-		while (timer.isTimeout(timeOut))
+		while (timer.isTimeout(timeOutRequest))
 		{
 			//try connecting......
 			if (connect(s, (SOCKADDR*)(&target), sizeof(target)) != SOCKET_ERROR)
@@ -46,7 +46,7 @@ namespace IpCommunication
 				m_portsDataSocketMap[port] = s;
 
 				//set a timeout for reading from the buffer with the recv function.
-				DWORD timeVal = timeOut;
+				DWORD timeVal = timeOutSocket;
 				setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeVal, sizeof(timeVal));
 
 				return true;
@@ -58,9 +58,9 @@ namespace IpCommunication
 		return false;
 	}
 
-	bool TcpClient::ConnectToHost(u_short port, const char * ip, double timeOut)
+	bool TcpClient::ConnectToHost(u_short port, const char * ip, double timeOutRequest, double timeOutSocket)
 	{
-		std::thread t = thread(&TcpClient::ConnectToHostThread, this, port, ip, timeOut);
+		std::thread t = thread(&TcpClient::ConnectToHostThread, this, port, ip, timeOutRequest, timeOutSocket);
 		t.detach();
 
 		return true;
@@ -91,15 +91,11 @@ namespace IpCommunication
 	int TcpClient::ReadDouble(int port, double& data)
 	{
 		char* value = new char[sizeof(double)];
-		ReadBytes(port, value, sizeof(double));
+		int numOfReadBytes = ReadBytes(port, value, sizeof(double));
 		double* doubleVal = (double*)value;
-
-		double* aaa = new double();
-		*aaa = 12345678;
-
 		data = *doubleVal;
 
-		return sizeof(double);
+		return numOfReadBytes;
 	}
 
 	int TcpClient::ReadBytes(int port, char* data, int numberOfBytes)

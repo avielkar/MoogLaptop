@@ -39,7 +39,8 @@ namespace IpCommunication
 		//port - the port num to connect to.
 		//ip - the ip string to connect to with the given port.
 		//timeOut - timeOut time for retreiving connection in ms.
-		bool ConnectToHostThread(u_short port, const char * ip, double timeOut);
+		//timeOutSocket - timeout time in ms for receving data requests. 
+		bool ConnectToHostThread(u_short port, const char * ip, double timeOut, double timeOutSocket);
 
 	public:
 		//Default constructor.
@@ -49,8 +50,9 @@ namespace IpCommunication
 		//Connectin to a given host.
 		//port - the port num to connect to.
 		//ip - the ip string to connect to with the given port.
-		//timeOut - timeOut time for retreiving connection in ms.
-		bool ConnectToHost(u_short port, const char * ip, double timeOut);
+		//timeOutRequest - timeOut time in ms for retreiving connection in ms.
+		//timeOutSocket - timeout time in ms for receving data requests. 
+		bool ConnectToHost(u_short port, const char * ip, double timeOutRequest, double timeOutSocket);
 
 		//Shuts down the socket and closes any connections on it.
 		//
