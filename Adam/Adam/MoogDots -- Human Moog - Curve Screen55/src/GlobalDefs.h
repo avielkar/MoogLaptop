@@ -118,4 +118,7 @@
 //'1' for drawing the triangles at the last movement between the trials or '0' for drawing a black background with the fixation point.
 #define DRAWING_BETWEEN_TRIALS 0
 
+//Defines if the running application is using the Laptop only (no Moog MBC).
+#define LAPTOP_VERSION 0
+
 #endif

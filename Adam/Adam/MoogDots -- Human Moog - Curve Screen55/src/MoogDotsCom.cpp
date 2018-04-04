@@ -1575,9 +1575,8 @@ void MoogDotsCom::ConvertUnsignedShortArrayToByteArrayDedicatedToCommunication(b
 void MoogDotsCom::SendOculusHeadTrackingIfAckedTo()
 {
 	//receivedValue indicate if the Matlab send a command that it is ready for receiving the OculusHeadMotionTracking.
-	unsigned short int receivedValue;
-	cbDConfigPort(PULSE_OUT_BOARDNUM, FIRSTPORTCH, 0);
-	cbDIn(PULSE_OUT_BOARDNUM, FIRSTPORTCH, &receivedValue);
+	double receivedValue = 0;
+	m_matlabTcpCommunicator->ReadDouble(1000, receivedValue, 9190);
 
 	if (m_finishedMovingBackward && receivedValue == 2)
 	{
@@ -1876,68 +1875,71 @@ void MoogDotsCom::SendMBCFrameThread(int data_size)
 
 	int start = clock();
 
-		//The trial number is send in this format 16 bits.
-		//The 8 LSB bits as follows : 1xxxxxxx where the x's tell a number under 100.
-		//The 8 MSB bits as follows : 1xxxxxxx where the x's tell the hundreds number (100,200,300,400 and etc).
-		//send the trial number LSB at the beggining of the forward movement.
-		if (m_forwardMovement)
-		{  //send the trial number LSB to the EEG.
-			m_trialNumber = g_pList.GetVectorData("Trial").at(0);
+	//The trial number is send in this format 16 bits.
+	//The 8 LSB bits as follows : 1xxxxxxx where the x's tell a number under 100.
+	//The 8 MSB bits as follows : 1xxxxxxx where the x's tell the hundreds number (100,200,300,400 and etc).
+	//send the trial number LSB at the beggining of the forward movement.
+	if (m_forwardMovement)
+	{  //send the trial number LSB to the EEG.
+		m_trialNumber = g_pList.GetVectorData("Trial").at(0);
 
-			//start indication
-			m_EEGLptContoller->Write(LPT_PORT, 0x01);
+		//start indication
+		m_EEGLptContoller->Write(LPT_PORT, 0x01);
 		WRITE_LOG(m_logger->m_logger, "Writing to the trial number start indication 0x01");
 
-			//write the full trial number to the log file.
+		//write the full trial number to the log file.
 		WRITE_LOG_PARAM(m_logger->m_logger, "Writing to the trial number", m_trialNumber);
 
 		thread t1(&MoogDotsCom::ResetEEGPins, this, m_trialNumber);
-			t1.detach();
-		}
+		t1.detach();
+	}
 
-	if (data_size >= 60)
+	if (!LAPTOP_VERSION)
 	{
-		MoogFrame* lastSentFrame;
-
-		for (int i = 0; i < INTERPOLATION_UPSAMPLING_SIZE * (data_size - 1) - 1; i++)
+		if (data_size >= 60)
 		{
-			if (i < m_interpolatedData.X.size())
+			MoogFrame* lastSentFrame;
+
+			for (int i = 0; i < INTERPOLATION_UPSAMPLING_SIZE * (data_size - 1) - 1; i++)
 			{
-				EnterCriticalSection(&m_CS);
-				DATA_FRAME moogFrame;
-
-				if (i > 0)
+				if (i < m_interpolatedData.X.size())
 				{
-					if (!CheckMoogAtCorrectPosition(lastSentFrame, 0.01))
-						break;
-				}
+					EnterCriticalSection(&m_CS);
+					DATA_FRAME moogFrame;
 
-				moogFrame.lateral = static_cast<double>(m_interpolatedData.X.at((i)));
-				moogFrame.surge = static_cast<double>(m_interpolatedData.Y.at((i)));
-				moogFrame.heave = static_cast<double>(m_interpolatedData.Z.at((i))) + MOTION_BASE_CENTER;
-				moogFrame.yaw = static_cast<double>(m_interpolatedRotData.X.at((i)));
-				moogFrame.pitch = static_cast<double>(m_interpolatedRotData.Y.at((i)));
-				moogFrame.roll = static_cast<double>(m_interpolatedRotData.Z.at((i)));
-				lastSentFrame = &moogFrame;
-				SET_DATA_FRAME(&moogFrame);
-				LeaveCriticalSection(&m_CS);
+					if (i > 0)
+					{
+						if (!CheckMoogAtCorrectPosition(lastSentFrame, 0.01))
+							break;
+					}
+
+					moogFrame.lateral = static_cast<double>(m_interpolatedData.X.at((i)));
+					moogFrame.surge = static_cast<double>(m_interpolatedData.Y.at((i)));
+					moogFrame.heave = static_cast<double>(m_interpolatedData.Z.at((i))) + MOTION_BASE_CENTER;
+					moogFrame.yaw = static_cast<double>(m_interpolatedRotData.X.at((i)));
+					moogFrame.pitch = static_cast<double>(m_interpolatedRotData.Y.at((i)));
+					moogFrame.roll = static_cast<double>(m_interpolatedRotData.Z.at((i)));
+					lastSentFrame = &moogFrame;
+					SET_DATA_FRAME(&moogFrame);
+					LeaveCriticalSection(&m_CS);
 
 #pragma region LOG-FRAME_MBC_TIME
-				double time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-				WRITE_LOG_PARAM(m_logger->m_logger , "The time for 1/16 frame was [ms]", time);
-				WRITE_LOG_PARAM(m_logger->m_logger , "The surge for 1/16 frame was [ms]", moogFrame.surge);
+					double time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
+					WRITE_LOG_PARAM(m_logger->m_logger, "The time for 1/16 frame was [ms]", time);
+					WRITE_LOG_PARAM(m_logger->m_logger, "The surge for 1/16 frame was [ms]", moogFrame.surge);
 
-				time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-				WRITE_LOG_PARAM(m_logger->m_logger , "Ending moving for the new frame" ,time );
+					time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
+					WRITE_LOG_PARAM(m_logger->m_logger, "Ending moving for the new frame", time);
 
-				double params[2] = { time, moogFrame.surge };
-				WRITE_LOG_PARAMS(m_logger->m_logger , "time vs place", params , 2);
+					double params[2] = { time, moogFrame.surge };
+					WRITE_LOG_PARAMS(m_logger->m_logger, "time vs place", params, 2);
 #pragma endregion LOG-FRAME_MBC_TIME
 
 #if USE_MATLAB_DEBUG_GRAPHS
-				m_debugPlace.push_back(moogFrame.surge);
-				m_debugPlaceTime.push_back(time);
+					m_debugPlace.push_back(moogFrame.surge);
+					m_debugPlaceTime.push_back(time);
 #endif //USE_MATLAB_DEBUG_GRAPHS
+				}
 			}
 		}
 	}
@@ -2040,7 +2042,7 @@ bool MoogDotsCom::CheckMoogAtFinal(double maxDifferentialError)
 
 bool MoogDotsCom::CheckMoogAtCorrectPosition(double maxDifferentialError)
 {
-	if (m_forwardMovement)
+	if (m_forwardMovement && !LAPTOP_VERSION)
 	{
 		WRITE_LOG(m_logger->m_logger, "Checking robot is at origin position.");
 		//if not at the origin show the error window and exit the function.
@@ -2061,17 +2063,20 @@ bool MoogDotsCom::CheckMoogAtCorrectPosition(double maxDifferentialError)
 	{
 		WRITE_LOG(m_logger->m_logger, "Checking robot is at final position.");
 		//if not at the origin show the error window and exit the function.
-		if (!CheckMoogAtFinal(0.001))
+		if (!LAPTOP_VERSION)
 		{
-			wxWindow* erroeWindow = new wxWindow();
-			erroeWindow->Show();
+			if (!CheckMoogAtFinal(0.001))
+			{
+				wxWindow* erroeWindow = new wxWindow();
+				erroeWindow->Show();
 
-			wxMessageDialog d(erroeWindow, "The Moog is not at the final position.");
-			d.ShowModal();
+				wxMessageDialog d(erroeWindow, "The Moog is not at the final position.");
+				d.ShowModal();
 
-			WRITE_LOG(m_logger->m_logger, "Moog is not at final position stopping the system.");
+				WRITE_LOG(m_logger->m_logger, "Moog is not at final position stopping the system.");
 
-			return false;
+				return false;
+			}
 		}
 	}
 
@@ -2088,13 +2093,16 @@ void MoogDotsCom::Compute()
 
 	if (m_data.index == 0)
 	{
-		//if not at the correct place return and show the erroe window.
-		if (!CheckMoogAtCorrectPosition(0.001))
-			return;
+		if (!LAPTOP_VERSION)
+		{
+			//if not at the correct place return and show the erroe window.
+			if (!CheckMoogAtCorrectPosition(0.001))
+				return;
+		}
 
 		newRandomStars = true;
 
-		// Updates the GL scene with all new parameters (in the else - the rendering function is called which use that paams and make transorms...)
+		// Updates the GL scene with all new parameters (in the else - the rendering function is called which use that params and make transorms...)
 		UpdateGLScene(true);
 
 		m_roundStartTime = clock();
@@ -2140,7 +2148,7 @@ void MoogDotsCom::Compute()
 #endif
 			if (m_glWindowExists)
 			{
-				//make the transformations afte the UpdateGlScee called in the first frame to updates all paramas and render the first frame.
+				//make the transformations after the UpdateGlScreen called in the first frame to updates all paramas and render the first frame.
 				RenderFrameInGlPanel();
 			}
 
@@ -2165,7 +2173,7 @@ void MoogDotsCom::Compute()
 		else
 		{
 			m_glWindow->GetGLPanel()->renderNow = false;
-	}
+		}
 	}
 	else
 	{

@@ -73,8 +73,8 @@ void MoogCom::talker(LPVOID lpParam)
 	mcom->ThreadInit();
 
 	bool goNextCommand = true;
-	while (mcom->m_continueSending) 
-			{
+	while (mcom->m_continueSending)
+	{
 		// Call the Control() function.
 		EnterCriticalSection(&mcom->m_comCS);
 		mcom->Control();
@@ -82,7 +82,7 @@ void MoogCom::talker(LPVOID lpParam)
 
 		// Set which compute functions are called.
 		EnterCriticalSection(&mcom->m_comCS);
-		if (mcom->m_computeCode & COMPUTE) 
+		if (mcom->m_computeCode & COMPUTE)
 		{
 			mcom->m_doCompute = true;
 		}
@@ -91,17 +91,17 @@ void MoogCom::talker(LPVOID lpParam)
 			mcom->m_doCompute = false;
 		}
 
-		if (mcom->m_computeCode & RECEIVE_COMPUTE) 
+		if (mcom->m_computeCode & RECEIVE_COMPUTE)
 		{
 			mcom->m_doReceiveCompute = true;
 		}
-		else 
+		else
 		{
 			mcom->m_doReceiveCompute = false;
 		}
 
 		// Execute the Compute() function if needed.
-		if (mcom->m_doCompute && goNextCommand) 
+		if (mcom->m_doCompute && goNextCommand)
 		{
 			mcom->Compute();
 		}
