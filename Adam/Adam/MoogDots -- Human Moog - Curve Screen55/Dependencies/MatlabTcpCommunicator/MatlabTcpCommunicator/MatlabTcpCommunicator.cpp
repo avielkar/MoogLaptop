@@ -80,4 +80,9 @@ namespace MatlabCommunicator
 
 		return false;
 	}
+
+	int MatlabTcpCommunicator::ReadDouble(double timeOut, double& valueOut, u_short port)
+	{
+		return m_client->ReadDouble(port, valueOut);
+	}
 }

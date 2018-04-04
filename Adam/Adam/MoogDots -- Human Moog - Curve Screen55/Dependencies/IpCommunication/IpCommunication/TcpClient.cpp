@@ -93,14 +93,20 @@ namespace IpCommunication
 		char* value = new char[sizeof(double)];
 		ReadBytes(port, value, sizeof(double));
 		double* doubleVal = (double*)value;
+
+		double* aaa = new double();
+		*aaa = 12345678;
+
 		data = *doubleVal;
+
+		return sizeof(double);
 	}
 
 	int TcpClient::ReadBytes(int port, char* data, int numberOfBytes)
 	{
 		int numOfReadBytes = 0;
 
-		while (numberOfBytes < numberOfBytes)
+		while (numOfReadBytes < numberOfBytes)
 		{
 			int m = recv(m_portsDataSocketMap[port], data + numOfReadBytes, numberOfBytes - numOfReadBytes , NULL);
 

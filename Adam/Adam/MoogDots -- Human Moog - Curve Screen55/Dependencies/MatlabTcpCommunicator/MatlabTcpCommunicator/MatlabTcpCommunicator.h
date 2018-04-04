@@ -36,10 +36,17 @@ namespace MatlabCommunicator
 
 		//This function read a string command from the given port (string command is data untill first '/n' in the buffer).
 		//timeOut - The max time to try reading the line wothout connection.
-		//data - the fisrst command in the buffer.
+		//data - the first command in the buffer.
 		//port - the port number to read the command from.
 		//Returns the number of read bytes int the line (without the '\n' byte).
 		int ReadString(double timeOut, string & data, u_short port);
+
+		//This function read a double value from the buffer communication.
+		//timeOut - The max time to try reading the line wothout connection.
+		//valueOut - The double value data read from the buffer.
+		//port - the port number to read the command from.
+		//Returns the number of read bytes.
+		int ReadDouble(double timeOut, double& valueOut, u_short port);
 	};
 }
 #endif
