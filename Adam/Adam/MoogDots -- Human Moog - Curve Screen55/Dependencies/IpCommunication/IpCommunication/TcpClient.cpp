@@ -90,7 +90,10 @@ namespace IpCommunication
 
 	int TcpClient::ReadDouble(int port, double& data)
 	{
-		
+		char* value = new char[sizeof(double)];
+		ReadBytes(port, value, sizeof(double));
+		double* doubleVal = (double*)value;
+		data = *doubleVal;
 	}
 
 	int TcpClient::ReadBytes(int port, char* data, int numberOfBytes)
