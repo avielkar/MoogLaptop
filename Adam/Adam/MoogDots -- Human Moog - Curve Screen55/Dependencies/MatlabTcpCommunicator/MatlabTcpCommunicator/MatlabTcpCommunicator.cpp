@@ -13,20 +13,20 @@ namespace MatlabCommunicator
 	{
 		m_client = new TcpClient();
 
-		m_client->ConnectToHost(FIRSTPORTA, HOST, TIMEOUT);
-		m_client->ConnectToHost(SECONDPORTA, HOST, TIMEOUT);
+		m_client->ConnectToHost(FIRSTPORTA, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
+		m_client->ConnectToHost(SECONDPORTA, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
-		m_client->ConnectToHost(FIRSTPORTB, HOST, TIMEOUT);
-		m_client->ConnectToHost(SECONDORTB, HOST, TIMEOUT);
+		m_client->ConnectToHost(FIRSTPORTB, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
+		m_client->ConnectToHost(SECONDORTB, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
-		m_client->ConnectToHost(FIRSTPORTCH, HOST, TIMEOUT);
-		m_client->ConnectToHost(SECONDPORTCH, HOST, TIMEOUT);
+		m_client->ConnectToHost(FIRSTPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
+		m_client->ConnectToHost(SECONDPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
-		m_client->ConnectToHost(FIRSTPORTCL, HOST, TIMEOUT);
-		m_client->ConnectToHost(SECONDPORTCL, HOST, TIMEOUT);
+		m_client->ConnectToHost(FIRSTPORTCL, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
+		m_client->ConnectToHost(SECONDPORTCL, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
 		//wait all connections to be made.
-		Sleep(TIMEOUT);
+		Sleep(TIMEOUT_CONNECTION_REQUEST);
 	}
 
 	void MatlabTcpCommunicator::CloseClientPortsToServer()
