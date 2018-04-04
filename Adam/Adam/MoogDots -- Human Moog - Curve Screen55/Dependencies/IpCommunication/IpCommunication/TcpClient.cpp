@@ -87,4 +87,23 @@ namespace IpCommunication
 	{
 		return recv(m_portsDataSocketMap[port], &data, 1, 0);
 	}
+
+	int TcpClient::ReadDouble(int port, double& data)
+	{
+		
+	}
+
+	int TcpClient::ReadBytes(int port, char* data, int numberOfBytes)
+	{
+		int numOfReadBytes = 0;
+
+		while (numberOfBytes < numberOfBytes)
+		{
+			int m = recv(m_portsDataSocketMap[port], data + numOfReadBytes, numberOfBytes - numOfReadBytes , NULL);
+
+			numOfReadBytes += m;
+		}
+
+		return numOfReadBytes;
+	}
 }

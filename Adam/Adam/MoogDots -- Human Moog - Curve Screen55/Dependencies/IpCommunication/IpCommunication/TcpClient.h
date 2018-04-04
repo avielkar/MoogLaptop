@@ -65,6 +65,20 @@ namespace IpCommunication
 		//data - The read char in the buffer.
 		//Returns the numbers of read chars.
 		int ReadByte(int port, char& data);
+
+		//Read a single double from the buffer communication in the given port.
+		//port - The server port to read the data from.
+		//data - The read double in the buffer.
+		//Returns the numbers of read chars.
+		int ReadDouble(int port, double& data);
+	
+	private:
+		//Read a specific number of bytes from the buffer communication in the given port (blocking).
+		//port - The server port to read the data from.
+		//data - The read bytes in the buffer.
+		//numberOfBytes - The number of bytes to wait (block) and read from the buffer.
+		//Returns the numbers of read chars.
+		int ReadBytes(int port, char* data, int numberOfBytes);
 	};
 }
 
