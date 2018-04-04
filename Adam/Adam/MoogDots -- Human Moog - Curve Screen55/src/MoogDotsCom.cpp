@@ -937,7 +937,6 @@ bool MoogDotsCom::CheckForEStop()
 
 void MoogDotsCom::Control()
 {
-	string command;
 	LARGE_INTEGER st, fi;
 	double start, finish;
 	bool stuffChanged = false;
@@ -968,14 +967,15 @@ void MoogDotsCom::Control()
 	QueryPerformanceCounter(&st);
 	start = static_cast<double>(st.QuadPart) / static_cast<double>(m_freq.QuadPart) * 1000.0;
 
-	try 
+	try
 	{
 		// Loop for a maximum of CONTROL_LOOP_TIME to get as much stuff from the Tempo buffer as possible.
-		do 
+		do
 		{
+			string command;
 			// Do the RDX stuff if we have a valid tempo handle and we actually received
 			// something on the buffer.
-			if (m_matlabTcpCommunicator->ReadString(1000 , command , 7090)  >  0) 
+			if (m_matlabTcpCommunicator->ReadString(1000, command, 7090) > 0)
 			{
 				string keyword;
 				vector<double> commandParams;
@@ -986,7 +986,7 @@ void MoogDotsCom::Control()
 				ClearMessageConsoleMaxItems();
 
 				// Put the command in the message console.
-				if (m_verboseMode) 
+				if (m_verboseMode)
 				{
 					AddItemToConsole(command);
 				}
@@ -995,14 +995,14 @@ void MoogDotsCom::Control()
 				GrabCommand(command, commandParams, keyword);
 
 				// Set the parameter data if it's supposed to be in the parameter list.
-				CommandRecognitionType commandRecognitionType =  AddCommandParamsToCommandsList(keyword , commandParams);
+				CommandRecognitionType commandRecognitionType = AddCommandParamsToCommandsList(keyword, commandParams);
 				if (m_verboseMode)
 				{
 					//show command validation and parameters if necessary for the console box.
-					ShowCommandStatusValidation(command, keyword , commandRecognitionType);
-							}
-						}
-			else 
+					ShowCommandStatusValidation(command, keyword, commandRecognitionType);
+				}
+			}
+			else
 			{
 				start = 0.0;
 			}
@@ -1012,7 +1012,7 @@ void MoogDotsCom::Control()
 
 		} while ((finish - start) < CONTROL_LOOP_TIME);
 	}
-	catch (exception &e) 
+	catch (exception &e)
 	{
 		stuffChanged = false;
 		m_messageConsole->InsertItems(1, &wxString("Serious screwup detected!"), 0);
@@ -1022,7 +1022,7 @@ void MoogDotsCom::Control()
 	SendOculusHeadTrackingIfAckedTo();
 
 	// Only waste time updating stuff if we actually received valid data from Tempo.
-	if (stuffChanged) 
+	if (stuffChanged)
 	{
 		// Updates the GL scene.
 		UpdateGLScene(true);
@@ -1037,12 +1037,12 @@ void MoogDotsCom::Control()
 			{
 
 				double time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-				WRITE_LOG_PARAM(m_logger->m_logger , "Start ThreadLoop3(2) for fixation point rendering [ms]", time);
+				WRITE_LOG_PARAM(m_logger->m_logger, "Start ThreadLoop3(2) for fixation point rendering [ms]", time);
 
 				m_glWindow->GetGLPanel()->ThreadLoop3();
 
 				time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-				WRITE_LOG_PARAM(m_logger->m_logger , "Stop ThreadLoop3(2) for fixation point rendering [ms]", time);
+				WRITE_LOG_PARAM(m_logger->m_logger, "Stop ThreadLoop3(2) for fixation point rendering [ms]", time);
 			}
 		}
 	}
@@ -1062,14 +1062,14 @@ void MoogDotsCom::Control()
 					if (glPanel->GetLastNumOfTriangles() > 0 && glPanel->GetLastTrianglesVertexArray() != NULL)
 					{
 						m_glWindow->GetGLPanel()->renderNow = true;
-						
+
 						double time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
 						WRITE_LOG_PARAM(m_logger->m_logger, "Start ThreadLoop3(1) for fixation point rendering [ms]", time);
 
 						glPanel->ThreadLoop2();
 
 						time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-						WRITE_LOG_PARAM(m_logger->m_logger , "Stop ThreadLoop3(1) for fixation point rendering [ms]", time);
+						WRITE_LOG_PARAM(m_logger->m_logger, "Stop ThreadLoop3(1) for fixation point rendering [ms]", time);
 					}
 				}
 				else
@@ -1080,31 +1080,31 @@ void MoogDotsCom::Control()
 						m_glWindow->GetGLPanel()->renderNow = true;
 
 						double time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-						WRITE_LOG_PARAM(m_logger->m_logger , "Start ThreadLoop3 for fixation point rendering [ms]", time);
+						WRITE_LOG_PARAM(m_logger->m_logger, "Start ThreadLoop3 for fixation point rendering [ms]", time);
 
 						//thread loop3 is for rendering only the fixation point.
 						glPanel->ThreadLoop3();
-						
+
 						time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-						WRITE_LOG_PARAM(m_logger->m_logger , "Stop ThreadLoop3 for fixation point rendering [ms]", time);
+						WRITE_LOG_PARAM(m_logger->m_logger, "Stop ThreadLoop3 for fixation point rendering [ms]", time);
 					}
 
 					//if the waiting time is not over but the render time is over, than render the freeze world include the starfield.
 					else
 					{//avi : error!!!!!!!!!! - should make it as a thread or remove it because the mbc waits for it to be over.
 						double time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-						WRITE_LOG_PARAM(m_logger->m_logger , "Start ThreadLoop2 for fixation point rendering and freezing world of stars [ms]", time);
+						WRITE_LOG_PARAM(m_logger->m_logger, "Start ThreadLoop2 for fixation point rendering and freezing world of stars [ms]", time);
 
 						glPanel->ThreadLoop2();
 
 						time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
-						WRITE_LOG_PARAM(m_logger->m_logger , "End ThreadLoop2 for fixation point rendering and freezing world of stars [ms]", time);
+						WRITE_LOG_PARAM(m_logger->m_logger, "End ThreadLoop2 for fixation point rendering and freezing world of stars [ms]", time);
 					}
 				}
 			}
 		}
 	}
-} // End void MoogDotsCom::Control()
+}// End void MoogDotsCom::Control()
 
 void MoogDotsCom::ShowCommandStatusValidation(string command , string keyword ,  CommandRecognitionType commandRecognitionType)
 {
@@ -1121,7 +1121,7 @@ void MoogDotsCom::ShowCommandStatusValidation(string command , string keyword , 
 		break;
 
 	case Invalid:
-		s = wxString::Format("INVALID PARAMETER VALUES FOR %s.", keyword);
+		s = wxString::Format("INVALID PARAMETER VALUES FOR %s.", keyword.c_str());
 		m_messageConsole->InsertItems(1, &s, 0);
 		break;
 

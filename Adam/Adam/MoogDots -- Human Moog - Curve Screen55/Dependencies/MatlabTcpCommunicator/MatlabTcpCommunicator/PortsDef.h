@@ -18,6 +18,6 @@ namespace PortsDef
 
 	#define TIMEOUT  9000
 
-	#define MAXLINEBUFFER 64
+	#define MAXLINEBUFFER 640
 }
 #endif
