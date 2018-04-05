@@ -1414,60 +1414,62 @@ void MoogDotsCom::GenerateMovement()
 		m_rotData.Z.push_back(trajectories[5].at(i));
 	}
 
-	/////////////////////////////////////////////////////////////////////////////interpolated data version///////////////////////////////////////////////
-	/*
-	avi : matlab interpolation version:
-	This will allow all the thread (the other threads) to connect to this particular matlab engine even if they have a pointer to others engine.
-	It should be said that eacj thred should have it's own matlab engime (pointer) for using the matlab ,but because the line after the "m_engine = engOpen(NULL)" line , they will use the same engine either
-	that the pointer of each thread is for different matlab engine (but should to is thread safe).
-	*/
-	/*EnterCriticalSection(&m_matlabInterpolation);
-	Engine* m_engine2 = engOpen(NULL);
-	int x = engEvalString(m_engine2, "format long");
-	mxArray* result = mxCreateDoubleMatrix(minLength , 1, mxREAL);
-	memcpy((void*)mxGetPr(result), (void*)&m_data.Y.at(0), sizeof(double) * minLength);
-	engPutVariable(m_engine2, "points", result);
-	engEvalString(m_engine2, "x = [1:1:60]");
-	x = engEvalString(m_engine2, "f = interp1(x' , points , 'pchip')");
-	LeaveCriticalSection(&m_matlabInterpolation);*/
-
-	std::vector<double> X;
-	tk::spline sX;
-	tk::spline sY;
-	tk::spline sZ;
-
-	for (int i = 0; i < minLength; i++)
+#ifndef LAPTOP_VERSION
 	{
-		X.push_back(i* INTERPOLATION_WIDE * INTERPOLATION_UPSAMPLING_SIZE);
-	}
+		/////////////////////////////////////////////////////////////////////////////interpolated data version///////////////////////////////////////////////
+		/*
+		avi : matlab interpolation version:
+		This will allow all the thread (the other threads) to connect to this particular matlab engine even if they have a pointer to others engine.
+		It should be said that eacj thred should have it's own matlab engime (pointer) for using the matlab ,but because the line after the "m_engine = engOpen(NULL)" line , they will use the same engine either
+		that the pointer of each thread is for different matlab engine (but should to is thread safe).
+		*/
+		/*EnterCriticalSection(&m_matlabInterpolation);
+		Engine* m_engine2 = engOpen(NULL);
+		int x = engEvalString(m_engine2, "format long");
+		mxArray* result = mxCreateDoubleMatrix(minLength , 1, mxREAL);
+		memcpy((void*)mxGetPr(result), (void*)&m_data.Y.at(0), sizeof(double) * minLength);
+		engPutVariable(m_engine2, "points", result);
+		engEvalString(m_engine2, "x = [1:1:60]");
+		x = engEvalString(m_engine2, "f = interp1(x' , points , 'pchip')");
+		LeaveCriticalSection(&m_matlabInterpolation);*/
 
-	sX.set_points(X, m_data.X , true);    // currently it is required that X is already sorted
-	sY.set_points(X, m_data.Y, true);    // currently it is required that X is already sorted
-	sZ.set_points(X, m_data.Z, true);    // currently it is required that X is already sorted
+		std::vector<double> X;
+		tk::spline sX;
+		tk::spline sY;
+		tk::spline sZ;
 
-	for (int i = 0; i < (minLength-1)*INTERPOLATION_UPSAMPLING_SIZE; i++)
-	{
-		m_interpolatedData.X.push_back(sX(i* INTERPOLATION_WIDE));
-		m_interpolatedData.Y.push_back(sY(i* INTERPOLATION_WIDE));
-		m_interpolatedData.Z.push_back(sZ(i* INTERPOLATION_WIDE));
-	}
+		for (int i = 0; i < minLength; i++)
+		{
+			X.push_back(i* INTERPOLATION_WIDE * INTERPOLATION_UPSAMPLING_SIZE);
+		}
 
-	tk::spline sRotX;
-	tk::spline sRotY;
-	tk::spline sRotZ;
+		sX.set_points(X, m_data.X, true);    // currently it is required that X is already sorted
+		sY.set_points(X, m_data.Y, true);    // currently it is required that X is already sorted
+		sZ.set_points(X, m_data.Z, true);    // currently it is required that X is already sorted
 
-	sRotX.set_points(X, m_rotData.X, true);    // currently it is required that X is already sorted
-	sRotY.set_points(X, m_rotData.Y, true);    // currently it is required that X is already sorted
-	sRotZ.set_points(X, m_rotData.Z, true);    // currently it is required that X is already sorted
+		for (int i = 0; i < (minLength - 1)*INTERPOLATION_UPSAMPLING_SIZE; i++)
+		{
+			m_interpolatedData.X.push_back(sX(i* INTERPOLATION_WIDE));
+			m_interpolatedData.Y.push_back(sY(i* INTERPOLATION_WIDE));
+			m_interpolatedData.Z.push_back(sZ(i* INTERPOLATION_WIDE));
+		}
 
-	for (int i = 0; i < (minLength-1)*INTERPOLATION_UPSAMPLING_SIZE; i++)
-	{
-		m_interpolatedRotData.X.push_back(sRotX(i* INTERPOLATION_WIDE));
-		m_interpolatedRotData.Y.push_back(sRotY(i* INTERPOLATION_WIDE));
-		m_interpolatedRotData.Z.push_back(sRotZ(i* INTERPOLATION_WIDE));
-	}
-	/////////////////////////////////////////////////////////////////////////////end interpolated data version///////////////////////////////////////////
+		tk::spline sRotX;
+		tk::spline sRotY;
+		tk::spline sRotZ;
 
+		sRotX.set_points(X, m_rotData.X, true);    // currently it is required that X is already sorted
+		sRotY.set_points(X, m_rotData.Y, true);    // currently it is required that X is already sorted
+		sRotZ.set_points(X, m_rotData.Z, true);    // currently it is required that X is already sorted
+
+		for (int i = 0; i < (minLength - 1)*INTERPOLATION_UPSAMPLING_SIZE; i++)
+		{
+			m_interpolatedRotData.X.push_back(sRotX(i* INTERPOLATION_WIDE));
+			m_interpolatedRotData.Y.push_back(sRotY(i* INTERPOLATION_WIDE));
+			m_interpolatedRotData.Z.push_back(sRotZ(i* INTERPOLATION_WIDE));
+		}
+		/////////////////////////////////////////////////////////////////////////////end interpolated data version///////////////////////////////////////////
+#endif
 
 	// Do the same finding of min and max lengths for the OpenGL trajectories.
 	minLength = maxLength = static_cast<int>(glTrajectories[0].size());
@@ -1892,8 +1894,7 @@ void MoogDotsCom::SendMBCFrameThread(int data_size)
 		t1.detach();
 	}
 
-	if (!LAPTOP_VERSION)
-	{
+#ifndef LAPTOP_VERSION
 		if (data_size >= 60)
 		{
 			MoogFrame* lastSentFrame;
@@ -1940,7 +1941,7 @@ void MoogDotsCom::SendMBCFrameThread(int data_size)
 				}
 			}
 		}
-	}
+#endif
 
 	//send the trial number MSB at the end of the forward movement.
 	if (m_forwardMovement)
@@ -2040,7 +2041,8 @@ bool MoogDotsCom::CheckMoogAtFinal(double maxDifferentialError)
 
 bool MoogDotsCom::CheckMoogAtCorrectPosition(double maxDifferentialError)
 {
-	if (m_forwardMovement && !LAPTOP_VERSION)
+#ifndef LAPTOP_VERSION
+	if (m_forwardMovement)
 	{
 		WRITE_LOG(m_logger->m_logger, "Checking robot is at origin position.");
 		//if not at the origin show the error window and exit the function.
@@ -2061,23 +2063,9 @@ bool MoogDotsCom::CheckMoogAtCorrectPosition(double maxDifferentialError)
 	{
 		WRITE_LOG(m_logger->m_logger, "Checking robot is at final position.");
 		//if not at the origin show the error window and exit the function.
-		if (!LAPTOP_VERSION)
-		{
-			if (!CheckMoogAtFinal(0.001))
-			{
-				wxWindow* erroeWindow = new wxWindow();
-				erroeWindow->Show();
 
-				wxMessageDialog d(erroeWindow, "The Moog is not at the final position.");
-				d.ShowModal();
-
-				WRITE_LOG(m_logger->m_logger, "Moog is not at final position stopping the system.");
-
-				return false;
-			}
-		}
 	}
-
+#endif
 	return true;
 }
 
@@ -2091,12 +2079,12 @@ void MoogDotsCom::Compute()
 
 	if (m_data.index == 0)
 	{
-		if (!LAPTOP_VERSION)
+#ifndef LAPTOP_VERSION
 		{
 			//if not at the correct place return and show the erroe window.
 			if (!CheckMoogAtCorrectPosition(0.001))
 				return;
-		}
+#endif
 
 		newRandomStars = true;
 

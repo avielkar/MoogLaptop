@@ -119,6 +119,6 @@
 #define DRAWING_BETWEEN_TRIALS 0
 
 //Defines if the running application is using the Laptop only (no Moog MBC).
-#define LAPTOP_VERSION 0
+#define LAPTOP_VERSION 1
 
 #endif
