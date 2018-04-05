@@ -47,7 +47,7 @@ using namespace IpCommunication;
 
 #define VOLTS2DEGS 180.0/5.0		// Degs/Volts
 
-#define LPT_PORT	0xb100		//the port to connect to and send dat with it to the EEG.
+#define LPT_PORT	0xb100		//the port to connect to and send data with it to the EEG.
 #define EEG_TRIAL_NUMBER_MSB_OFFSET	0x01
 #define EEG_TRIAL_NUMBER_LSB_OFFSET	0x01
 
