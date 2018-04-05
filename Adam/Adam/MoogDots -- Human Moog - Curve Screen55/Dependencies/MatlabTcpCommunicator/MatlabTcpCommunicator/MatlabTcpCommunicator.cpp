@@ -6,13 +6,11 @@ namespace MatlabCommunicator
 
 	MatlabTcpCommunicator::MatlabTcpCommunicator()
 	{
-
+		m_client = new TcpClient();
 	}
 
 	void MatlabTcpCommunicator::ConnectClientPortsToServer()
 	{
-		m_client = new TcpClient();
-
 		m_client->ConnectToHost(FIRSTPORTA, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 		m_client->ConnectToHost(SECONDPORTA, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
@@ -20,9 +18,9 @@ namespace MatlabCommunicator
 		m_client->ConnectToHost(SECONDORTB, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
 		m_client->ConnectToHost(FIRSTPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
-		m_client->ConnectToHost(SECONDPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
-
 		m_client->ConnectToHost(FIRSTPORTCL, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
+		
+		m_client->ConnectToHost(SECONDPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 		m_client->ConnectToHost(SECONDPORTCL, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
 		//wait all connections to be made.
@@ -54,6 +52,8 @@ namespace MatlabCommunicator
 		{
 			if (!ReadByte(timeOut, currentReadChar, port))
 				return -1;
+			if (index == MAXLINEBUFFER - 1)
+				return -1;
 			buffer[index] = currentReadChar;
 			index++;
 			cout << currentReadChar;
@@ -67,12 +67,8 @@ namespace MatlabCommunicator
 
 	bool MatlabTcpCommunicator::ReadByte(double timeOut, char& data, u_short port)
 	{
-		Timer timer;
-		timer.start();
-
-		while (timer.isTimeout(timeOut))
 		{
-			if (m_client->ReadByte(port, data))
+			if (m_client->ReadByte(port, data) > 0)
 			{
 				return true;
 			}

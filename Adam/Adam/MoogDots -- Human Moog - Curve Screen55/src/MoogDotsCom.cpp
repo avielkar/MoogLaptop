@@ -736,7 +736,6 @@ void MoogDotsCom::ThreadInit(void)
 	if (m_matlabTcpCommunicator == NULL)
 	{
 		m_matlabTcpCommunicator = new MatlabTcpCommunicator();
-
 		m_matlabTcpCommunicator->ConnectClientPortsToServer();
 	}
 }
@@ -1006,7 +1005,6 @@ void MoogDotsCom::Control()
 			{
 				start = 0.0;
 			}
-
 			QueryPerformanceCounter(&fi);
 			finish = static_cast<double>(fi.QuadPart) / static_cast<double>(m_freq.QuadPart) * 1000.0;
 
@@ -1576,7 +1574,7 @@ void MoogDotsCom::SendOculusHeadTrackingIfAckedTo()
 {
 	//receivedValue indicate if the Matlab send a command that it is ready for receiving the OculusHeadMotionTracking.
 	double receivedValue = 0;
-	m_matlabTcpCommunicator->ReadDouble(1000, receivedValue, 9190);
+	//m_matlabTcpCommunicator->ReadDouble(1000, receivedValue, 9190);
 
 	if (m_finishedMovingBackward && receivedValue == 2)
 	{

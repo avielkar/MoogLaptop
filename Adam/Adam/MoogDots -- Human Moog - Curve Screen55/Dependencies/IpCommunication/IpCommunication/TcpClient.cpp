@@ -4,6 +4,8 @@ namespace IpCommunication
 {
 	TcpClient::TcpClient()
 	{
+		InitializeCriticalSection(&m_receivingSection);
+
 		//start the winsock
 		WSADATA wsadata;
 		int error = WSAStartup(0x202, &wsadata);
@@ -43,7 +45,9 @@ namespace IpCommunication
 			if (connect(s, (SOCKADDR*)(&target), sizeof(target)) != SOCKET_ERROR)
 			{
 				cout << "connected to " << port << "\n";
+				EnterCriticalSection(&m_receivingSection);
 				m_portsDataSocketMap[port] = s;
+				LeaveCriticalSection(&m_receivingSection);
 
 				//set a timeout for reading from the buffer with the recv function.
 				DWORD timeVal = timeOutSocket;
@@ -76,38 +80,44 @@ namespace IpCommunication
 		WSACleanup();
 	}
 
-	int TcpClient::Write(int port, const char* data)
+	int TcpClient::Write(u_short port, const char* data)
 	{
 		cout << "writing - " << data << " - " << sizeof(data);
 
 		return send(m_portsDataSocketMap[port], data, strlen(data), 0);
 	}
 
-	int TcpClient::ReadByte(int port, char& data)
+	int TcpClient::ReadByte(u_short port, char& data)
 	{
-		return recv(m_portsDataSocketMap[port], &data, 1, 0);
-	}
-
-	int TcpClient::ReadDouble(int port, double& data)
-	{
-		char* value = new char[sizeof(double)];
-		int numOfReadBytes = ReadBytes(port, value, sizeof(double));
-		double* doubleVal = (double*)value;
-		data = *doubleVal;
+		EnterCriticalSection(&m_receivingSection);
+		int numOfReadBytes = recv(m_portsDataSocketMap[port], &data, 1, 0);
+		LeaveCriticalSection(&m_receivingSection);
 
 		return numOfReadBytes;
 	}
 
-	int TcpClient::ReadBytes(int port, char* data, int numberOfBytes)
+	int TcpClient::ReadDouble(u_short port, double& data)
+	{
+		char* value = new char[sizeof(double)];
+		int numOfReadBytes = ReadBytes(port, value, sizeof(double));
+		
+		if (numOfReadBytes == sizeof(double))
+		{
+			double* doubleVal = (double*)value;
+			data = *doubleVal;
+		}
+
+		return numOfReadBytes;
+	}
+
+	int TcpClient::ReadBytes(u_short port, char* data, int numberOfBytes)
 	{
 		int numOfReadBytes = 0;
 
-		while (numOfReadBytes < numberOfBytes)
-		{
-			int m = recv(m_portsDataSocketMap[port], data + numOfReadBytes, numberOfBytes - numOfReadBytes , NULL);
-
-			numOfReadBytes += m;
-		}
+		EnterCriticalSection(&m_receivingSection);
+			int m = recv(m_portsDataSocketMap[port], data + numOfReadBytes, numberOfBytes - numOfReadBytes, NULL);
+		LeaveCriticalSection(&m_receivingSection);
+		numOfReadBytes += m;
 
 		return numOfReadBytes;
 	}

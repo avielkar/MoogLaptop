@@ -17,7 +17,7 @@ namespace PortsDef
 	#define SECONDPORTCH 9191
 
 	#define TIMEOUT_CONNECTION_REQUEST  9000
-	#define TIMEOUT_SENT  1
+	#define TIMEOUT_SENT  2
 
 	#define MAXLINEBUFFER 640
 }
