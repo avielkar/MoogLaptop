@@ -47,6 +47,8 @@ namespace MatlabCommunicator
 		//port - the port number to read the command from.
 		//Returns the number of read bytes.
 		int ReadDouble(double timeOut, double& valueOut, u_short port);
+
+		int WriteDouble(u_short port, double value);
 	};
 }
 #endif

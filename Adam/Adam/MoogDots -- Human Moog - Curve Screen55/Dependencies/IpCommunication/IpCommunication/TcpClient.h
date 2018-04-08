@@ -64,6 +64,8 @@ namespace IpCommunication
 		//
 		int Write(u_short port, const char* data);
 
+		int WriteDouble(u_short port, double value);
+
 		//Read a single char from the buffer communication in the given port.
 		//port - The server port to read the data from.
 		//data - The read char in the buffer.
@@ -75,7 +77,7 @@ namespace IpCommunication
 		//data - The read double in the buffer.
 		//Returns the numbers of read chars.
 		int ReadDouble(u_short port, double& data);
-	
+
 	private:
 		//Read a specific number of bytes from the buffer communication in the given port (blocking).
 		//port - The server port to read the data from.

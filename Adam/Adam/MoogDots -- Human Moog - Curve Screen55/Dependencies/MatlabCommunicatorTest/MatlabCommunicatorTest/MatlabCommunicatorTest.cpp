@@ -16,6 +16,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	matlabTcpcommunicator->ConnectClientPortsToServer();
 
 	double out = 0;
+
+	matlabTcpcommunicator->WriteDouble(FIRSTPORTB, 123456789);
+
 	matlabTcpcommunicator->ReadDouble(1000, out, FIRSTPORTB);
 
 	matlabTcpcommunicator->CloseClientPortsToServer();

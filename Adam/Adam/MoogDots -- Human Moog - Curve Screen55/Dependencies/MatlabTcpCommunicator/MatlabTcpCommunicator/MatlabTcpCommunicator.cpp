@@ -19,7 +19,7 @@ namespace MatlabCommunicator
 
 		m_client->ConnectToHost(FIRSTPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 		m_client->ConnectToHost(FIRSTPORTCL, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
-		
+
 		m_client->ConnectToHost(SECONDPORTCH, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 		m_client->ConnectToHost(SECONDPORTCL, HOST, TIMEOUT_CONNECTION_REQUEST, TIMEOUT_SENT);
 
@@ -80,5 +80,10 @@ namespace MatlabCommunicator
 	int MatlabTcpCommunicator::ReadDouble(double timeOut, double& valueOut, u_short port)
 	{
 		return m_client->ReadDouble(port, valueOut);
+	}
+
+	int MatlabTcpCommunicator::WriteDouble(u_short port, double value)
+	{
+		return m_client->WriteDouble(port, value);
 	}
 }
