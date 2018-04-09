@@ -49,6 +49,8 @@ namespace MatlabCommunicator
 		int ReadDouble(double timeOut, double& valueOut, u_short port);
 
 		int WriteDouble(u_short port, double value);
+
+		int WriteArray(u_short port, char* data, int size);
 	};
 }
 #endif

@@ -66,6 +66,8 @@ namespace IpCommunication
 
 		int WriteDouble(u_short port, double value);
 
+		int WriteByteArray(u_short port, char* data, int size);
+
 		//Read a single char from the buffer communication in the given port.
 		//port - The server port to read the data from.
 		//data - The read char in the buffer.

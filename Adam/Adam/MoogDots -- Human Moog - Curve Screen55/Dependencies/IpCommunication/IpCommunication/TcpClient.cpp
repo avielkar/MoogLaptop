@@ -92,6 +92,11 @@ namespace IpCommunication
 		return send(m_portsDataSocketMap[port], (char*)&value, sizeof(double) , 0);
 	}
 
+	int TcpClient::WriteByteArray(u_short port, char* data, int size)
+	{
+		return send(m_portsDataSocketMap[port], data, size, 0);
+	}
+
 	int TcpClient::ReadByte(u_short port, char& data)
 	{
 		EnterCriticalSection(&m_receivingSection);

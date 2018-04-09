@@ -86,4 +86,9 @@ namespace MatlabCommunicator
 	{
 		return m_client->WriteDouble(port, value);
 	}
+
+	int MatlabTcpCommunicator::WriteArray(u_short port, char* data, int size)
+	{
+		return m_client->WriteByteArray(port, data, size);
+	}
 }

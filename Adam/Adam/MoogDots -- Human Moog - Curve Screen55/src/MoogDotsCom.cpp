@@ -1576,20 +1576,19 @@ void MoogDotsCom::SendOculusHeadTrackingIfAckedTo()
 {
 	//receivedValue indicate if the Matlab send a command that it is ready for receiving the OculusHeadMotionTracking.
 	double receivedValue = 0;
-	//m_matlabTcpCommunicator->ReadDouble(1000, receivedValue, 9190);
+	m_matlabTcpCommunicator->ReadDouble(1000, receivedValue, 9190);
 
 	if (m_finishedMovingBackward && receivedValue == 2)
 	{
 		//send the matlab in the PCI\DIO that the moog is going to send the data the Matlab asked before(that would be after the Moog finished the forward and backward movement and get the Matlab command before , between the movements , when the PostTrialTime begin).
-		cbDConfigPort(PULSE_OUT_BOARDNUM, SECONDPORTCH, DIGITALOUT);
-		cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTCH, 1);
+		m_matlabTcpCommunicator->WriteDouble(9190, sizeof(ovrQuatf) / 2 * m_glData.index);
 
 		int time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
 		WRITE_LOG_PARAM(m_logger->m_logger, "Start sending oculus head motion tracking for the matlab [ms]", time);
 
 
 		//send the data to Matlab.
-		SendHeadMotionTrackToMatlab(&m_orientationsBytesArray[0], sizeof(ovrQuatf) / 2 * m_glData.index);
+		SendHeadMotionTrackToMatlabTcp(&m_orientationsBytesArray[0], sizeof(ovrQuatf) / 2 * m_glData.index);
 
 		time = (double)((clock() - m_roundStartTime) * 1000) / (double)CLOCKS_PER_SEC;
 		WRITE_LOG_PARAM(m_logger->m_logger, "End sending oculus head motion tracking for the matlab [ms]", time);
@@ -1777,6 +1776,184 @@ void MoogDotsCom::SendHeadMotionTrackToMatlab(unsigned short* orientationsBytesA
 
 	int endSendingTime = clock();
 	int diff = (endSendingTime - beginSendingTime)*1000 / CLOCKS_PER_SEC;
+}
+
+void MoogDotsCom::SendHeadMotionTrackToMatlabTcp(unsigned short* orientationsBytesArray, int size)
+{
+	WRITE_LOG(m_logger->m_logger, "sending head motion treack to matlab...");
+
+	std::string orientationString((char*)orientationsBytesArray , size*2);
+
+	m_matlabTcpCommunicator->WriteArray(9190, (char*)orientationsBytesArray, size * 2);
+	return;
+
+	////////
+	////////
+
+	////////SECONDPORTCL - is the port to send the (at least) two bits in order to indicate start of sending information to matlab.
+	////////SECONDPORTB - is the port to send the information of the head racking to the matlab.
+	////////FIRSTPORTCL - is the port to liten to signals bits from matlab that have received the information bits.
+
+	////////cbDConfigPort(PULSE_OUT_BOARDNUM, SECONDPORTCL, DIGITALOUT);
+	////////cbDConfigPort(PULSE_OUT_BOARDNUM, FIRSTPORTCL, DIGITALIN);
+	////////cbDConfigPort(PULSE_OUT_BOARDNUM, SECONDPORTB, DIGITALOUT);
+	////////int x = 0;// = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTCL, (unsigned short)1);
+
+	////////here ,we send the information byte before the confirmation of the first bit of initialization due to races in the innformation byte(which may be not enough time to read after write ,
+	////////so, in order to emit the damage of the delay we send it before the init bit to give a long pre time (so the delay kicked off).
+	////////unsigned short readBytes = 0;
+	////////bool skipFirstCondition = false;	//each of the skipCondition variable is indicaing if to skip the n'th condition because it was passed alrready and may now not passes due to needed changes.
+	////////bool skipSecondCondition = false;
+	////////bool skipThirdCondition = false;
+	////////bool skipFirstWriting = false;
+	////////bool skipSecondWriting = false;
+	////////bool skipThirdWritinng = false;
+	////////bool skipForthWriting = false;
+	////////bool skipFifthWriting = false;
+	////////bool skipSixWriting = false;
+	////////byte* byteArray = new byte[2];		//The array toi catch each index in orientationsBytesArray of type unsigned short int = 2 bytes.
+	////////byte firstChar1;					//The first char (byte) of the decompress byteArray.
+	////////byte secondChar1;					//The second char (byte) of the decompress byteArray.
+	////////ofstream myfile;
+	////////myfile.open("log_writing.txt");
+	////////byte* charArray = new byte[2];		/*
+	////////									Array include the data for only 1 byte in 2 bytes as folows that 'n' or '\0' would not fall never as the data sent (the Matlab would compress the byte data from the 2 bytes).
+	////////									The data send is really as follows: a[0] = xxxxd1d2d3d4 , a[1] = xxxxd5d6d7d8.
+	////////									The Matlab would compress it to 1 byte of data d1d2d3d4d5d6d7d8.
+	////////									*/
+	////////int m2 = 0;							//when hits to 5000 - it's time to render the empty world. because if not, the hourglass would appear due to the do while loop.
+	////////int startTime = clock();			//For timeouts for skip the sending.
+	////////int currentTime;					//For timeouts for skip the sending.
+	////////bool skipTheEndCharacterSend = false;	//If was timeout during the sending skip all the stages of handshake at the end include the '\n' inicator.
+	////////double timeDiff;					//For timeouts for skip the sending.
+	////////int beginSendingTime = clock();		//For measure the time to send the OculusHeadTrackingData.
+
+	/////////*
+	////////The 'n' is used as data to be send to indicate matlab that it is the last data to be received - so cant send it as data if not really indicating the end of the data stream.
+	////////The '\0' is the c++ end of string when matlab mex file take the bytes to the string - so cant send it as data also.
+	////////*/
+	////////for (int i = 0; i < size; i++)
+	////////{
+	////////	memcpy(byteArray, orientationsBytesArray + i, 2 * sizeof(byte));
+
+	////////	memcpy(&firstChar1, byteArray, sizeof(byte));
+	////////	memcpy(&secondChar1, byteArray + 1, sizeof(byte));
+
+	////////	int m = 0;
+	////////	for (int j = 0; j < 4; j++)
+	////////	{
+	////////		WRITE_LOG_PARAM(m_logger->m_logger, "writing to matlab from oculus", i);
+
+	////////		if (j == 0 || j == 1)
+	////////			ConvertUnsignedShortArrayToByteArrayDedicatedToCommunication(firstChar1, charArray);
+	////////		else
+	////////			ConvertUnsignedShortArrayToByteArrayDedicatedToCommunication(secondChar1, charArray);
+
+	////////		do
+	////////		{
+	////////			currentTime = clock();
+	////////			timeDiff = (currentTime - startTime) / double(CLOCKS_PER_SEC) * 1000;
+	////////			if (timeDiff > 3000.0)
+	////////			{
+	////////				skipTheEndCharacterSend = true;
+	////////				break;
+	////////			}
+
+	////////			cbDIn(PULSE_OUT_BOARDNUM, FIRSTPORTCL, &readBytes);
+	////////			m2++;
+	////////			it's time to render the empty world. because if not, the hourglass would appear due to the do while loop.
+	////////			if (m2 > 50000)
+	////////			{
+	////////				m_glWindow->GetGLPanel()->ThreadLoop3();
+	////////				m2 = 0;
+	////////			}
+	////////		} while (readBytes);
+
+	////////		if (skipTheEndCharacterSend)
+	////////			break;
+	////////		Sleep(0.5);
+
+	////////		x = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTB, (char)(charArray[m]));
+	////////		m++;
+	////////		m = m % 2;
+	////////		x = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTCL, (unsigned short)1);
+
+	////////		do
+	////////		{
+	////////			currentTime = clock();
+	////////			timeDiff = (currentTime - startTime) / double(CLOCKS_PER_SEC) * 1000;
+	////////			if (timeDiff > 3000.0)
+	////////			{
+	////////				skipTheEndCharacterSend = true;
+	////////				break;
+	////////			}
+
+	////////			cbDIn(PULSE_OUT_BOARDNUM, FIRSTPORTCL, &readBytes);
+	////////			m2++;
+	////////			it's time to render the empty world. because if not, the hourglass would appear due to the do while loop.
+	////////			if (m2 > 50000)
+	////////			{
+	////////				m_glWindow->GetGLPanel()->ThreadLoop3();
+	////////				m2 = 0;
+	////////			}
+	////////		} while (!readBytes);
+
+	////////		if (skipTheEndCharacterSend)
+	////////			break;
+
+	////////		x = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTCL, (unsigned short)0);
+
+	////////		Sleep(0.5);
+	////////	}
+
+	////////	if (skipTheEndCharacterSend)
+	////////		break;
+	////////}
+
+	////////free the allocated memory.
+	////////delete[] charArray;
+	////////memory deallocation.
+	////////delete[] byteArray;
+
+	////////if (skipTheEndCharacterSend)
+	////////	return;
+
+	////////do
+	////////{
+	////////	cbDIn(PULSE_OUT_BOARDNUM, FIRSTPORTCL, &readBytes);
+	////////} while (readBytes);
+
+
+	////////sending the "new line" character to  indicate the end of the data (\n).
+	////////send the information 2bytes(unsigned short) before the init bit as explained before.
+	////////x = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTB, '\n');
+	////////myfile << (int(0));
+
+	////////send the first bit of initialization
+	////////x = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTCL, (unsigned short)1);
+
+	////////Sleep(0.5);
+
+	////////the server wait to know that matlab get the information bit.
+	////////do
+	////////{
+	////////	cbDIn(PULSE_OUT_BOARDNUM, FIRSTPORTCL, &readBytes);
+	////////} while (!readBytes);
+
+	////////send confirmation to the matlab that we get the ack bytes.
+	////////cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTCL, (unsigned short)0);
+
+	////////wait for matlab confirm that it waits for another byts of information
+	////////do
+	////////{
+	////////	cbDIn(PULSE_OUT_BOARDNUM, FIRSTPORTCL, &readBytes);
+	////////} while (readBytes);
+
+	////////myfile.close();
+	////////x = cbDOut(PULSE_OUT_BOARDNUM, SECONDPORTB, (unsigned short)0);
+
+	////////int endSendingTime = clock();
+	////////int diff = (endSendingTime - beginSendingTime) * 1000 / CLOCKS_PER_SEC;
 }
 
 void MoogDotsCom::SendMBCFrame	(int& data_index)

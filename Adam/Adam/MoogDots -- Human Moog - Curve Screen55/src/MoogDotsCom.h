@@ -352,6 +352,8 @@ private:
 	//
 	void SendHeadMotionTrackToMatlab(unsigned short* orientationsBytesArray, int size);
 
+	void SendHeadMotionTrackToMatlabTcp(unsigned short* orientationsBytesArray, int size);
+
 	// ************************************************************************ //
 	//	vector<double> convertPolar2Vector(double elevation, double azimuth,	//
 	//									  double magnitude)						//
