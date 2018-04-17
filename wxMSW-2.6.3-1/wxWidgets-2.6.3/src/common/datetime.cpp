@@ -327,7 +327,14 @@ static int GetTimeZone()
 
     return (int)gmtoffset;
 #else // !WX_GMTOFF_IN_TM
-    return (int)WX_TIMEZONE;
+#if _MSC_VER < 1900
+	long timeZone = timezone;
+	return (int)WX_TIMEZONE;
+#else
+	long timeZone = 0;
+	_get_timezone(&timeZone);
+	return (int)timeZone;
+#endif
 #endif // WX_GMTOFF_IN_TM/!WX_GMTOFF_IN_TM
 }
 

@@ -14,7 +14,6 @@
 *.suo
 *.filters
 *.ilk
-*.vcxproj
 *.suo
 *.sdf
 *.sdf
@@ -27,7 +26,6 @@
 *.suo
 *.log
 *.log
-*.vcxproj
 *.filters
 *.sdf
 *.suo
@@ -37,7 +35,6 @@
 *.log
 *.sdf
 *.filters
-*.vcxproj
 *.suo
 *.sdf
 *.suo
@@ -45,7 +42,6 @@
 *.sdf
 *.suo
 *.log
-*.vcxproj
 *.filters
 *.sdf
 *.suo
@@ -59,3 +55,5 @@
 *.txt
 *.user
 Adam/Adam/MoogDots -- Human Moog - Curve Screen55/Dependencies/LPTInterfaceTest/LPTInterfaceTest/inpout32.DLL
+*.db
+*.htm
